@@ -6,84 +6,84 @@ NullScript provides fun, expressive alternatives to standard JavaScript keywords
 
 ### Functions and Variables
 
-| NullScript | JavaScript | Example |
-|------------|------------|---------|
-| `run` | `function` | `run greet(name) { ... }` |
-| `fixed` | `const` | `fixed PI = 3.14159;` |
-| `let` | `let` | `let counter = 0;` |
-| `var` | `var` | `var legacy = "old";` |
+| NullScript | JavaScript | Example                   |
+| ---------- | ---------- | ------------------------- |
+| `run`      | `function` | `run greet(name) { ... }` |
+| `fixed`    | `const`    | `fixed PI = 3.14159;`     |
+| `let`      | `let`      | `let counter = 0;`        |
+| `var`      | `var`      | `var legacy = "old";`     |
 
 ### Control Flow
 
-| NullScript | JavaScript | Example |
-|------------|------------|---------|
-| `whatever` | `if` | `whatever (condition) { ... }` |
-| `otherwise` | `else` | `otherwise { ... }` |
-| `since` | `for` | `since (item of items) { ... }` |
-| `when` | `while` | `when (condition) { ... }` |
-| `switch` | `switch` | `switch (value) { ... }` |
-| `case` | `case` | `case "value":` |
-| `done` | `default` | `done:` |
-| `stop` | `break` | `stop;` |
-| `keepgoing` | `continue` | `keepgoing;` |
+| NullScript  | JavaScript | Example                         |
+| ----------- | ---------- | ------------------------------- |
+| `whatever`  | `if`       | `whatever (condition) { ... }`  |
+| `otherwise` | `else`     | `otherwise { ... }`             |
+| `since`     | `for`      | `since (item of items) { ... }` |
+| `when`      | `while`    | `when (condition) { ... }`      |
+| `switch`    | `switch`   | `switch (value) { ... }`        |
+| `case`      | `case`     | `case "value":`                 |
+| `done`      | `default`  | `done:`                         |
+| `stop`      | `break`    | `stop;`                         |
+| `keepgoing` | `continue` | `keepgoing;`                    |
 
 ### Modules
 
-| NullScript | JavaScript | Example |
-|------------|------------|---------|
-| `use` | `import` | `use fs from 'fs';` |
-| `share` | `export` | `share { myFunction };` |
+| NullScript | JavaScript | Example                 |
+| ---------- | ---------- | ----------------------- |
+| `use`      | `import`   | `use fs from 'fs';`     |
+| `share`    | `export`   | `share { myFunction };` |
 
 ### Error Handling
 
-| NullScript | JavaScript | Example |
-|------------|------------|---------|
-| `test` | `try` | `test { ... }` |
-| `grab` | `catch` | `grab (error) { ... }` |
-| `atLast` | `finally` | `atLast { ... }` |
-| `trigger` | `throw` | `trigger new Error();` |
+| NullScript | JavaScript | Example                |
+| ---------- | ---------- | ---------------------- |
+| `test`     | `try`      | `test { ... }`         |
+| `grab`     | `catch`    | `grab (error) { ... }` |
+| `atLast`   | `finally`  | `atLast { ... }`       |
+| `trigger`  | `throw`    | `trigger new Error();` |
 
 ### Classes and Objects
 
-| NullScript | JavaScript | Example |
-|------------|------------|---------|
-| `model` | `class` | `model MyClass { ... }` |
-| `__init__` | `constructor` | `__init__() { ... }` |
-| `inherits` | `extends` | `model Child inherits Parent` |
-| `fresh` | `new` | `fresh MyClass();` |
-| `self` | `this` | `self.property` |
-| `parent` | `super` | `parent.method();` |
-| `forever` | `static` | `run forever method() { ... }` |
+| NullScript | JavaScript    | Example                        |
+| ---------- | ------------- | ------------------------------ |
+| `model`    | `class`       | `model MyClass { ... }`        |
+| `__init__` | `constructor` | `__init__() { ... }`           |
+| `inherits` | `extends`     | `model Child inherits Parent`  |
+| `fresh`    | `new`         | `fresh MyClass();`             |
+| `self`     | `this`        | `self.property`                |
+| `parent`   | `super`       | `parent.method();`             |
+| `forever`  | `static`      | `run forever method() { ... }` |
 
 ### Async Programming
 
-| NullScript | JavaScript | Example |
-|------------|------------|---------|
-| `later` | `async` | `run later fetch() { ... }` |
-| `hold` | `await` | `let data = hold fetch();` |
+| NullScript | JavaScript | Example                     |
+| ---------- | ---------- | --------------------------- |
+| `later`    | `async`    | `run later fetch() { ... }` |
+| `hold`     | `await`    | `let data = hold fetch();`  |
 
 ### Boolean Values
 
-| NullScript | JavaScript | Example |
-|------------|------------|---------|
-| `yes` | `true` | `fixed isValid = yes;` |
-| `no` | `false` | `fixed isValid = no;` |
+| NullScript | JavaScript | Example                |
+| ---------- | ---------- | ---------------------- |
+| `yes`      | `true`     | `fixed isValid = yes;` |
+| `no`       | `false`    | `fixed isValid = no;`  |
 
 ### Other Keywords
 
-| NullScript | JavaScript | Example |
-|------------|------------|---------|
-| `remove` | `delete` | `remove obj.property;` |
-| `what` | `typeof` | `what value` |
-| `kind` | `instanceof` | `whatever (obj kind Array) { ... }` |
-| `inside` | `in` | `whatever ("key" inside obj) { ... }` |
-| `part` | `of` | `since (item part items) { ... }` |
-| `nothing` | `void` | `nothing 0` |
-| `using` | `with` | `using (obj) { ... }` |
-| `freeze` | `debugger` | `freeze;` |
-| `pause` | `yield` | `pause value;` |
-| `getter` | `get` | `getter property() { ... }` |
-| `setter` | `set` | `setter property(value) { ... }` |
+| NullScript | JavaScript   | Example                               |
+| ---------- | ------------ | ------------------------------------- |
+| `remove`   | `delete`     | `remove obj.property;`                |
+| `what`     | `typeof`     | `what value`                          |
+| `kind`     | `instanceof` | `whatever (obj kind Array) { ... }`   |
+| `inside`   | `in`         | `whatever ("key" inside obj) { ... }` |
+| `part`     | `of`         | `since (item part items) { ... }`     |
+| `nothing`  | `void`       | `nothing 0`                           |
+| `using`    | `with`       | `using (obj) { ... }`                 |
+| `freeze`   | `debugger`   | `freeze;`                             |
+| `pause`    | `yield`      | `pause value;`                        |
+| `getter`   | `get`        | `getter property() { ... }`           |
+| `setter`   | `set`        | `setter property(value) { ... }`      |
 
 ## Examples
 
@@ -185,4 +185,3 @@ run safeDivision(a, b) {
 - You can mix NullScript and JavaScript syntax in the same file
 - The transpiler only replaces NullScript keywords, leaving everything else unchanged
 - Output JavaScript is always clean and readable
-

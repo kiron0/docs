@@ -7,7 +7,8 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "clean": "rm -rf .vitepress/dist"
+    "clean": "rm -rf .vitepress/dist",
+    "format": "prettier --write \"**/*.{js,json,md,vue}\""
   },
   "dependencies": {
     "vitepress": "^1.0.0-rc.36",
@@ -15,7 +16,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.6",
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "prettier": "^3.6.2"
   },
   "keywords": [
     "nullscript",

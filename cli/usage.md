@@ -19,6 +19,7 @@ nsc run hello.ns
 ```
 
 This is perfect for:
+
 - Quick testing and prototyping
 - Running simple scripts
 - Development and debugging
@@ -53,6 +54,7 @@ nsc keywords --category console
 ```
 
 Available categories:
+
 - `functions` - Function-related keywords
 - `variables` - Variable declaration keywords
 - `control-flow` - Conditional and loop keywords
@@ -66,10 +68,10 @@ Available categories:
 
 ### Global Options
 
-| Option | Description |
-|--------|-------------|
-| `--help` | Show help information |
-| `--version` | Show version number |
+| Option      | Description           |
+| ----------- | --------------------- |
+| `--help`    | Show help information |
+| `--version` | Show version number   |
 
 ## Examples
 
@@ -93,6 +95,7 @@ nsc run hello.ns
 ### Common Issues
 
 **Command not found:**
+
 ```bash
 # Make sure NullScript is installed globally
 npm install -g nullscript
@@ -102,6 +105,7 @@ npx nsc --version
 ```
 
 **File not found:**
+
 ```bash
 # Check file path
 ls -la hello.ns
@@ -111,6 +115,7 @@ nsc run /full/path/to/hello.ns
 ```
 
 **Compilation errors:**
+
 ```bash
 # Use verbose mode for detailed errors
 nsc build hello.ns --verbose

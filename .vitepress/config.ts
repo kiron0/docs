@@ -5,9 +5,47 @@ export default defineConfig({
   description:
     "A fun parody programming language that transpiles to JavaScript",
   base: "/",
+  appearance: true,
   head: [
     ["link", { rel: "icon", href: "/logo.png" }],
     ["link", { rel: "apple-touch-icon", href: "/logo.png" }],
+    // Open Graph / Facebook
+    ["meta", { property: "og:type", content: "website" }],
+    [
+      "meta",
+      {
+        property: "og:title",
+        content: "NullScript - JavaScript with Attitude",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content:
+          "A fun parody programming language that transpiles to JavaScript",
+      },
+    ],
+    ["meta", { property: "og:image", content: "/og-image.png" }],
+    ["meta", { property: "og:url", content: "https://nullscript.js.org" }],
+    // Twitter
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    [
+      "meta",
+      {
+        name: "twitter:title",
+        content: "NullScript - JavaScript with Attitude",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:description",
+        content:
+          "A fun parody programming language that transpiles to JavaScript",
+      },
+    ],
+    ["meta", { name: "twitter:image", content: "/og-image.png" }],
   ],
   themeConfig: {
     logo: {

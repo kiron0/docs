@@ -1,0 +1,52 @@
+:root {
+  --vp-c-brand-1: #f7df1e;
+  --vp-c-brand-2: #e6c800;
+  --vp-button-brand-bg: #f7df1e;
+  --vp-button-brand-hover-bg: #e6c800;
+  --vp-button-brand-text: #000;
+  --vp-button-brand-hover-text: #000;
+  --vp-code-bg: #f7df1e;
+  --vp-code-color: #000;
+}
+
+.dark {
+  --vp-c-neutral-1: #000;
+  --vp-code-bg: #333;
+  --vp-code-color: #f7df1e;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-soft);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-light);
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.VPHome .VPHomeHero .container .main {
+  animation: fadeInUp 0.6s ease-out;
+}

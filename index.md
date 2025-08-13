@@ -74,4 +74,4 @@ NullScript makes JavaScript development more enjoyable by providing:
 
 ---
 
-*"NullScript: Because programming should be fun, even when it's serious."* 🎭
+_"NullScript: Because programming should be fun, even when it's serious."_ 🎭

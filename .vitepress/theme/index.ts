@@ -1,9 +1,10 @@
 import DefaultTheme from "vitepress/theme";
-import NullScriptPlayground from "../components/NullScriptPlayground.vue";
+import Playground from "../components/playground.vue";
+import "./custom.css";
 
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
-    app.component("NullScriptPlayground", NullScriptPlayground);
+    app.component("Playground", Playground);
   },
 };

@@ -41,6 +41,7 @@ The output is always clean, readable JavaScript that you could have written by h
 ## What's Different?
 
 Instead of writing:
+
 ```javascript
 function greet(name) {
   console.log(`Hello, ${name}!`);
@@ -48,6 +49,7 @@ function greet(name) {
 ```
 
 You write:
+
 ```javascript
 run greet(name) {
   speak.say(`Hello, ${name}!`);
@@ -55,4 +57,3 @@ run greet(name) {
 ```
 
 Both compile to the same JavaScript output, but NullScript adds personality to your development experience.
-

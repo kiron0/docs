@@ -41,23 +41,27 @@ pnpm add -D nullscript
 If you want to build from source or contribute to NullScript:
 
 ### Prerequisites
+
 - **Rust** 1.70 or higher
 - **Cargo** (comes with Rust)
 
 ### Steps
 
 1. **Clone the repository**:
+
 ```bash
 git clone https://github.com/nullscript-lang/nullscript.git
 cd nullscript
 ```
 
 2. **Install dependencies**:
+
 ```bash
 npm install
 ```
 
 3. **Build the Rust CLI**:
+
 ```bash
 npm run build
 ```
@@ -78,6 +82,7 @@ Run it:
 ```
 
 You should see:
+
 ```
 Hello, NullScript! 🎭
 ```
