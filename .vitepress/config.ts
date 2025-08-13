@@ -4,10 +4,10 @@ export default defineConfig({
   title: "NullScript",
   description:
     "A fun parody programming language that transpiles to JavaScript",
-  base: "/docs/",
+  base: "/",
   head: [
-    ["link", { rel: "icon", href: "/docs/logo.png" }],
-    ["link", { rel: "apple-touch-icon", href: "/docs/logo.png" }],
+    ["link", { rel: "icon", href: "/logo.png" }],
+    ["link", { rel: "apple-touch-icon", href: "/logo.png" }],
   ],
   themeConfig: {
     logo: {
