@@ -18,8 +18,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'npm'
-        cache-dependency-path: docs/package-lock.json
 
     - name: Install dependencies
       run: |
@@ -37,4 +35,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/.vitepress/dist
-        cname: nullscript-lang.github.io
