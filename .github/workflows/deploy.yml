@@ -39,7 +39,7 @@ jobs:
         NPM_CONFIG_AUDIT: 'false'
         NPM_CONFIG_FUND: 'false'
       run: |
-        npm ci --verbose
+        npm install --no-audit --no-fund --verbose
 
     - name: Build
       run: npm run build
