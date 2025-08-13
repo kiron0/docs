@@ -96,6 +96,11 @@ speak.say(`Doubled: ${doubled}`);
 - **🎨 Syntax Highlighting**: Clear visual distinction between code and output
 - **📱 Mobile Friendly**: Works on desktop and mobile devices
 - **🚀 No Setup Required**: Start coding immediately
+- **🎛️ Keyword Mapping**: Uses client-side transpilation for instant results
+
+::: info Transpilation Method
+This playground uses client-side keyword mapping for instant transpilation. For production use with advanced features, use the [NullScript CLI](./cli/usage) with the `nsc` command.
+:::
 
 ## How to Use
 
