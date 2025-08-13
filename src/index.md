@@ -8,7 +8,7 @@ hero:
   text: "JavaScript with Attitude"
   tagline: "A fun parody programming language that transpile to JavaScript"
   image:
-    src: "/assets/logo.png"
+    src: "/logo.png"
     alt: NullScript Logo
     width: 256
     height: 256

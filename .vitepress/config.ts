@@ -7,10 +7,9 @@ export default defineConfig({
   base: "/",
   appearance: true,
   srcDir: "src",
-  assetsDir: "assets",
   head: [
-    ["link", { rel: "icon", href: "/assets/logo.png" }],
-    ["link", { rel: "apple-touch-icon", href: "/assets/logo.png" }],
+    ["link", { rel: "icon", href: "/logo.png" }],
+    ["link", { rel: "apple-touch-icon", href: "/logo.png" }],
     // Open Graph / Facebook
     ["meta", { property: "og:type", content: "website" }],
     [
@@ -28,7 +27,7 @@ export default defineConfig({
           "A fun parody programming language that transpiles to JavaScript",
       },
     ],
-    ["meta", { property: "og:image", content: "/assets/og-image.png" }],
+    ["meta", { property: "og:image", content: "/og-image.png" }],
     ["meta", { property: "og:url", content: "https://nullscript.js.org" }],
     // Twitter
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
@@ -47,11 +46,11 @@ export default defineConfig({
           "A fun parody programming language that transpiles to JavaScript",
       },
     ],
-    ["meta", { name: "twitter:image", content: "/assets/og-image.png" }],
+    ["meta", { name: "twitter:image", content: "/og-image.png" }],
   ],
   themeConfig: {
     logo: {
-      src: "/assets/logo.png",
+      src: "/logo.png",
       alt: "NullScript Logo",
       style: {
         borderRadius: "10%",
