@@ -121,4 +121,4 @@ nsc run /full/path/to/hello.ns
 nsc build hello.ns --verbose
 ```
 
-For more help, run `nsc --help` or check the [documentation](/reference/keywords.md).
+For more help, run `nsc --help` or check the [documentation](../reference/keywords.md).

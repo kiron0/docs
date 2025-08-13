@@ -224,7 +224,7 @@ speak.say(`PI = ${PI}`);
 
 Now that you understand the basics:
 
-- [Learn more concepts →](/guide/basic-concepts.md)
-- [Explore the full keyword reference →](/reference/keywords.md)
-- [Check out more examples →](/examples/basic.md)
-- [Learn about CLI usage →](/cli/usage.md)
+- [Learn more concepts →](../guide/basic-concepts.md)
+- [Explore the full keyword reference →](../reference/keywords.md)
+- [Check out more examples →](../examples/basic.md)
+- [Learn about CLI usage →](../cli/usage.md)

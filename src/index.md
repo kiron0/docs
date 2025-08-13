@@ -1,12 +1,14 @@
 ---
 layout: home
+title: "NullScript - JavaScript with Attitude"
+titleTemplate: false
 
 hero:
   name: "NullScript"
   text: "JavaScript with Attitude"
   tagline: "A fun parody programming language that transpile to JavaScript"
   image:
-    src: "/logo.png"
+    src: "/assets/logo.png"
     alt: NullScript Logo
     width: 256
     height: 256

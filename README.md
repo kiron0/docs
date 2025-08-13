@@ -337,11 +337,11 @@ console.log(sum); // Output from NullScript function
 
 ## 📚 Documentation
 
-- **[Getting Started Guide](./guide/getting-started.md)** - Complete setup and first steps
-- **[Language Reference](./reference/keywords.md)** - Full keyword mapping and syntax
-- **[Examples](./examples/basic.md)** - More code examples and patterns
-- **[CLI Documentation](./cli/usage.md)** - Complete command-line interface guide
-- **[Interactive Playground](./playground.md)** - Try NullScript in your browser
+- **[Getting Started Guide](./src/guide/getting-started.md)** - Complete setup and first steps
+- **[Language Reference](./src/reference/keywords.md)** - Full keyword mapping and syntax
+- **[Examples](./src/examples/basic.md)** - More code examples and patterns
+- **[CLI Documentation](./src/cli/usage.md)** - Complete command-line interface guide
+- **[Interactive Playground](./src/playground.md)** - Try NullScript in your browser
 
 ## 🤝 Contributing
 
@@ -369,4 +369,4 @@ NullScript embraces the joy of coding while maintaining the power and flexibilit
 
 **Ready to add some attitude to your JavaScript?** 🚀
 
-[Get Started](./guide/getting-started.md) | [Try the Playground](./playground.md) | [View Examples](./examples/basic.md)
+[Get Started](./src/guide/getting-started.md) | [Try the Playground](./src/playground.md) | [View Examples](./src/examples/basic.md)

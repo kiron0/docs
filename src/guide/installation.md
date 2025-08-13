@@ -110,7 +110,7 @@ Most editors that support JavaScript syntax highlighting will work well with `.n
 
 ## Next Steps
 
-- [Write your first program →](/guide/getting-started.md)
-- [Learn the basic concepts →](/guide/basic-concepts.md)
-- [Learn the best practices →](/guide/best-practices.md)
-- [Explore the language reference →](/reference/keywords.md)
+- [Write your first program →](../guide/getting-started.md)
+- [Learn the basic concepts →](../guide/basic-concepts.md)
+- [Learn the best practices →](../guide/best-practices.md)
+- [Explore the language reference →](../reference/keywords.md)
