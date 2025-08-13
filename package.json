@@ -7,14 +7,16 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "clean": "rm -rf .vitepress/dist"
+    "clean": "rm -rf .vitepress/dist",
+    "deploy": "npm run build && gh-pages -d .vitepress/dist"
   },
   "dependencies": {
     "vitepress": "^1.0.0-rc.36",
     "vue": "^3.3.13"
   },
   "devDependencies": {
-    "@types/node": "^20.10.6"
+    "@types/node": "^20.10.6",
+    "gh-pages": "^6.3.0"
   },
   "keywords": [
     "nullscript",
@@ -27,5 +29,5 @@
     "type": "git",
     "url": "https://github.com/nullscript-lang/nullscript-docs.git"
   },
-  "homepage": "https://nullscript-lang.github.io/nullscript-docs/"
+  "homepage": "https://nullscript-lang.github.io/nullscript/"
 }
