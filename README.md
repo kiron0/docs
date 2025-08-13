@@ -20,7 +20,7 @@ npm install --save-dev nullscript
 
 Create a file called `hello.ns`:
 
-```nullscript
+```javascript
 run greet(name) {
   return `Hello, ${name}! Welcome to NullScript! 🎭`;
 }
@@ -33,10 +33,10 @@ Compile and run:
 
 ```bash
 # Compile to JavaScript
-nullscript compile hello.ns
+nsc run hello.ns
 
 # Or compile and run directly
-nullscript run hello.ns
+nsc run hello.ns
 ```
 
 Output:
@@ -69,7 +69,7 @@ NullScript replaces traditional JavaScript keywords with more expressive alterna
 
 #### Variables and Functions
 
-```nullscript
+```javascript
 // Variables
 fixed name = "NullScript";
 let counter = 0;
@@ -111,7 +111,7 @@ function greetUser(username) {
 
 #### Control Flow
 
-```nullscript
+```javascript
 run checkAge(age) {
   whatever (age >= 18) {
     speak.say("You are an adult! 🎉");
@@ -134,7 +134,7 @@ run countToFive() {
 
 #### Objects and Arrays
 
-```nullscript
+```javascript
 // Object creation
 fixed person = {
   name: "Alice",
@@ -151,7 +151,7 @@ speak.say("Doubled numbers:", doubled);
 
 #### Async/Await
 
-```nullscript
+```javascript
 run later fetchUserData(userId) {
   test {
     fixed response = hold pull(`/api/users/${userId}`);
@@ -191,9 +191,6 @@ nsc build src/ --outDir dist
 # Show keyword mappings
 nsc keywords
 
-# Search for specific keywords
-nsc keywords --search "speak"
-
 # Show keywords by category
 nsc keywords --category control-flow
 ```
@@ -202,7 +199,7 @@ nsc keywords --category control-flow
 
 ### Class Definition
 
-```nullscript
+```javascript
 model Calculator {
   __init__() {
     self.history = [];
@@ -228,7 +225,7 @@ speak.say(`Result: ${sum}`);
 
 **math.ns**
 
-```nullscript
+```javascript
 fixed PI = 3.14159;
 
 run calculateArea(radius) {
@@ -244,7 +241,7 @@ share { PI, calculateArea, calculateCircumference };
 
 **main.ns**
 
-```nullscript
+```javascript
 use { calculateArea, calculateCircumference } from './math.ns';
 
 fixed radius = 5;
@@ -258,7 +255,7 @@ speak.say(`Circumference: ${circumference}`);
 
 ### Error Handling
 
-```nullscript
+```javascript
 run safeDivide(a, b) {
   whatever (b === 0) {
     speak.scream("Error: Division by zero!");
@@ -285,7 +282,7 @@ NullScript is fully compatible with JavaScript and Node.js ecosystems:
 
 ### Import JavaScript in NullScript
 
-```nullscript
+```javascript
 use axios from 'axios';
 use { format } from 'date-fns';
 
