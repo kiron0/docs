@@ -19,9 +19,6 @@ hero:
     - theme: alt
       text: Try Playground
       link: /playground
-    - theme: alt
-      text: View on GitHub
-      link: https://github.com/nullscript-lang/nullscript
 
 features:
   - icon: 🎪

@@ -1,14 +1,14 @@
 # NullScript Playground
 
-Try NullScript code live in your browser! This playground shows you how NullScript code compiles to JavaScript.
+Try NullScript code live in your browser! Write NullScript code in the editor below and see it transpiled to JavaScript in real-time.
 
-## Quick Try
-
-::: tip Interactive Testing
-Open your browser's developer console (F12) and copy-paste the examples below to see them in action!
-:::
+<ClientOnly>
+  <NullScriptPlayground />
+</ClientOnly>
 
 ## Example Snippets
+
+Try these examples in the playground above:
 
 ### Basic Function
 ```javascript
@@ -18,16 +18,6 @@ run add(a, b) {
 
 fixed result = add(5, 3);
 speak.say(`Result: ${result}`);
-```
-
-**Compiles to:**
-```javascript
-function add(a, b) {
-  return a + b;
-}
-
-const result = add(5, 3);
-console.log(`Result: ${result}`);
 ```
 
 ### Control Flow
@@ -43,111 +33,28 @@ run checkNumber(num) {
 }
 
 checkNumber(42);
-checkNumber(-5);
-checkNumber(0);
-```
-
-**Compiles to:**
-```javascript
-function checkNumber(num) {
-  if (num > 0) {
-    console.log("Positive number");
-  } else if (num < 0) {
-    console.log("Negative number");
-  } else {
-    console.log("Zero");
-  }
-}
-
-checkNumber(42);
-checkNumber(-5);
-checkNumber(0);
 ```
 
 ### Classes
 ```javascript
 model Calculator {
   __init__() {
-    self.history = [];
+    self.result = 0;
   }
 
-  run add(a, b) {
-    let result = a + b;
-    self.history.push(`${a} + ${b} = ${result}`);
-    return result;
+  run add(value) {
+    self.result += value;
+    return self;
   }
 
-  run showHistory() {
-    since (fixed entry part self.history) {
-      speak.say(entry);
-    }
+  run getResult() {
+    return self.result;
   }
 }
 
 fixed calc = fresh Calculator();
-calc.add(10, 5);
-calc.add(20, 30);
-calc.showHistory();
-```
-
-**Compiles to:**
-```javascript
-class Calculator {
-  constructor() {
-    this.history = [];
-  }
-
-  add(a, b) {
-    let result = a + b;
-    this.history.push(`${a} + ${b} = ${result}`);
-    return result;
-  }
-
-  showHistory() {
-    for (const entry of this.history) {
-      console.log(entry);
-    }
-  }
-}
-
-const calc = new Calculator();
-calc.add(10, 5);
-calc.add(20, 30);
-calc.showHistory();
-```
-
-### Async Functions
-```javascript
-run later simulateApiCall(data) {
-  // Simulate network delay
-  hold new Promise(resolve => setTimeout(resolve, 1000));
-  return `Processed: ${data}`;
-}
-
-run later main() {
-  speak.say("Starting API call...");
-  let result = hold simulateApiCall("Hello World");
-  speak.say(result);
-}
-
-main();
-```
-
-**Compiles to:**
-```javascript
-async function simulateApiCall(data) {
-  // Simulate network delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  return `Processed: ${data}`;
-}
-
-async function main() {
-  console.log("Starting API call...");
-  let result = await simulateApiCall("Hello World");
-  console.log(result);
-}
-
-main();
+calc.add(10).add(5);
+speak.say(`Total: ${calc.getResult()}`);
 ```
 
 ### Error Handling
@@ -161,8 +68,6 @@ run safeDivide(a, b) {
   } grab (error) {
     speak.scream(`Error: ${error.message}`);
     return null;
-  } atLast {
-    speak.say("Division operation completed");
   }
 }
 
@@ -170,137 +75,49 @@ fixed result = safeDivide(10, 2);
 speak.say(`Result: ${result}`);
 ```
 
-**Compiles to:**
+### Arrays and Loops
 ```javascript
-function safeDivide(a, b) {
-  try {
-    if (b === 0) {
-      throw new Error("Division by zero!");
-    }
-    return a / b;
-  } catch (error) {
-    console.error(`Error: ${error.message}`);
-    return null;
-  } finally {
-    console.log("Division operation completed");
-  }
+fixed fruits = ["apple", "banana", "cherry"];
+
+since (fixed fruit part fruits) {
+  speak.say(`I love ${fruit}!`);
 }
 
-const result = safeDivide(10, 2);
-console.log(`Result: ${result}`);
-```
-
-## Try It Yourself
-
-### Step 1: Manual Transpilation
-Copy any NullScript code from above and manually replace the keywords:
-
-| NullScript | JavaScript |
-|------------|------------|
-| `run` | `function` |
-| `fixed` | `const` |
-| `speak.say` | `console.log` |
-| `speak.scream` | `console.error` |
-| `whatever` | `if` |
-| `otherwise` | `else` |
-| `since` | `for` |
-| `when` | `while` |
-| `test` | `try` |
-| `grab` | `catch` |
-| `atLast` | `finally` |
-| `trigger` | `throw` |
-| `fresh` | `new` |
-| `model` | `class` |
-| `__init__` | `constructor` |
-| `self` | `this` |
-| `later` | `async` |
-| `hold` | `await` |
-
-### Step 2: Test in Console
-1. Open browser developer tools (F12)
-2. Go to the Console tab
-3. Paste your compiled JavaScript code
-4. Press Enter to execute
-
-### Step 3: Experiment
-Try these variations:
-- Change function names and parameters
-- Add more complex logic
-- Test error conditions
-- Try different data types
-
-## Advanced Examples
-
-### Higher-Order Functions
-```javascript
-run createMultiplier(factor) {
-  return (value) => value * factor;
-}
-
-fixed double = createMultiplier(2);
-fixed triple = createMultiplier(3);
-
-speak.say(double(5)); // 10
-speak.say(triple(5)); // 15
-```
-
-### Custom Error Classes
-```javascript
-model ValidationError inherits fail {
-  __init__(field, message) {
-    super(`Validation failed for ${field}: ${message}`);
-    self.field = field;
-    self.message = message;
-  }
-}
-
-run validateUser(user) {
-  whatever (!user.name || user.name.length < 2) {
-    trigger fresh ValidationError("name", "Name must be at least 2 characters");
-  }
-
-  whatever (!user.email || !user.email.includes("@")) {
-    trigger fresh ValidationError("email", "Valid email is required");
-  }
-}
-
-test {
-  validateUser({ name: "A", email: "invalid" });
-} grab (error) {
-  speak.scream(`Validation Error: ${error.message}`);
-}
+fixed numbers = [1, 2, 3, 4, 5];
+fixed doubled = numbers.map(n => n * 2);
+speak.say(`Doubled: ${doubled}`);
 ```
 
 ## Features
 
-- **Real-time Examples**: See NullScript code alongside compiled JavaScript
-- **Interactive Testing**: Use browser console to test code immediately
-- **Comprehensive Coverage**: Examples for all major language features
-- **Error Handling**: Learn how to handle errors in NullScript
+- **🔄 Real-time Transpilation**: See JavaScript output as you type
+- **▶️ Code Execution**: Run your code directly in the browser
+- **📋 Copy Support**: Copy transpiled JavaScript with one click
+- **🎨 Syntax Highlighting**: Clear visual distinction between code and output
+- **📱 Mobile Friendly**: Works on desktop and mobile devices
+- **🚀 No Setup Required**: Start coding immediately
 
 ## How to Use
 
-1. **Choose an Example**: Pick any example from above
-2. **Understand the Mapping**: See how NullScript keywords map to JavaScript
-3. **Test in Console**: Copy the JavaScript version and run it
-4. **Experiment**: Modify the code and see what happens
+1. **Write Code**: Enter NullScript code in the left textarea
+2. **Auto-Transpile**: Code is automatically transpiled as you type
+3. **Manual Transpile**: Click "🔄 Transpile" to transpile manually
+4. **Run Code**: Click "▶️ Run Code" to execute the JavaScript
+5. **View Output**: See console output in the bottom panel
+6. **Copy JavaScript**: Use "📋 Copy JS" to copy the transpiled code
+
+## Keyboard Shortcuts
+
+- **Ctrl/Cmd + Enter**: Transpile and run code
+- **Ctrl/Cmd + Shift + C**: Copy JavaScript output
+- **Ctrl/Cmd + Shift + X**: Clear all content
 
 ## Tips
 
-- Start with simple functions and gradually try more complex patterns
-- Use the keyword mapping table as a reference
-- Check the browser console for output and errors
-- Try mixing NullScript and JavaScript syntax to see the differences
-- Experiment with different data types and control flow patterns
+- Start with simple examples and gradually try more complex code
+- Use the example snippets as starting points
+- Check the console output for errors and results
+- Experiment with different NullScript features
+- Copy the JavaScript output to use in your projects
 
-## Future Enhancements
-
-The playground can be enhanced with:
-
-- **Online Editor**: Full-featured code editor with syntax highlighting
-- **Auto-compilation**: Real-time transpilation as you type
-- **Code Sharing**: Share code snippets via URL
-- **Mobile Support**: Touch-friendly interface for mobile devices
-- **Advanced Features**: Debugging tools and performance profiling
-
-For now, this manual approach gives you a hands-on way to experiment with NullScript and understand how it compiles to JavaScript!
+Try the examples above or write your own NullScript code to see the magic happen! 🎭✨

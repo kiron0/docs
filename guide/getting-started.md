@@ -179,9 +179,6 @@ my-project/
 ```bash
 # Build entire project
 nsc build src/ --outDir dist
-
-# Watch for changes
-nsc build src/ --outDir dist --watch
 ```
 
 ## Import/Export

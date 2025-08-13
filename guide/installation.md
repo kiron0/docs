@@ -59,12 +59,7 @@ npm install
 
 3. **Build the Rust CLI**:
 ```bash
-npm run cli:build
-```
-
-4. **Link for global usage** (optional):
-```bash
-npm link packages/nullscript-cli
+npm run build
 ```
 
 ## Verify Installation
@@ -79,7 +74,7 @@ speak.say(greeting);
 Run it:
 
 ```bash
-nsc run hello.ns
+./target/debug/nsc run hello.ns
 ```
 
 You should see:
