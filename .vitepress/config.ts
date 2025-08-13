@@ -4,7 +4,6 @@ export default defineConfig({
   title: "NullScript",
   description:
     "A fun parody programming language that transpiles to JavaScript",
-  base: "/",
   head: [
     ["link", { rel: "icon", href: "/logo.png" }],
     ["link", { rel: "apple-touch-icon", href: "/logo.png" }],
