@@ -40,6 +40,7 @@ nullscript run hello.ns
 ```
 
 Output:
+
 ```
 Hello, World! Welcome to NullScript! 🎭
 ```
@@ -50,19 +51,19 @@ Hello, World! Welcome to NullScript! 🎭
 
 NullScript replaces traditional JavaScript keywords with more expressive alternatives:
 
-| JavaScript | NullScript | Description |
-|------------|------------|-------------|
-| `function` | `run` | Define a function |
-| `const` | `fixed` | Constant variable |
-| `let` | `let` | Mutable variable |
-| `console.log` | `speak.say` | Print to console |
-| `console.error` | `speak.scream` | Print error |
-| `if` | `whatever` | Conditional statement |
-| `else` | `otherwise` | Else clause |
-| `true` | `yes` | Boolean true |
-| `false` | `no` | Boolean false |
-| `class` | `model` | Define a class |
-| `new` | `fresh` | Create instance |
+| JavaScript      | NullScript     | Description           |
+| --------------- | -------------- | --------------------- |
+| `function`      | `run`          | Define a function     |
+| `const`         | `fixed`        | Constant variable     |
+| `let`           | `let`          | Mutable variable      |
+| `console.log`   | `speak.say`    | Print to console      |
+| `console.error` | `speak.scream` | Print error           |
+| `if`            | `whatever`     | Conditional statement |
+| `else`          | `otherwise`    | Else clause           |
+| `true`          | `yes`          | Boolean true          |
+| `false`         | `no`           | Boolean false         |
+| `class`         | `model`        | Define a class        |
+| `new`           | `fresh`        | Create instance       |
 
 ### Basic Syntax Examples
 
@@ -226,6 +227,7 @@ speak.say(`Result: ${sum}`);
 ### Module System
 
 **math.ns**
+
 ```nullscript
 fixed PI = 3.14159;
 
@@ -241,6 +243,7 @@ share { PI, calculateArea, calculateCircumference };
 ```
 
 **main.ns**
+
 ```nullscript
 use { calculateArea, calculateCircumference } from './math.ns';
 
@@ -303,14 +306,14 @@ run later fetchAndFormatData() {
 
 ```javascript
 // Import compiled NullScript module
-import { greet, calculateSum } from './compiled/utils.js';
+import { greet, calculateSum } from "./compiled/utils.js";
 
 // Use NullScript functions in JavaScript
 const message = greet("JavaScript Developer");
 const sum = calculateSum(10, 20);
 
 console.log(message); // Output from NullScript function
-console.log(sum);     // Output from NullScript function
+console.log(sum); // Output from NullScript function
 ```
 
 ## 🎯 Why Choose NullScript?
@@ -334,11 +337,11 @@ console.log(sum);     // Output from NullScript function
 
 ## 📚 Documentation
 
-- **[Getting Started Guide](./guide/getting-started.md)** - Complete setup and first steps
-- **[Language Reference](./reference/keywords.md)** - Full keyword mapping and syntax
-- **[Examples](./examples/basic.md)** - More code examples and patterns
-- **[CLI Documentation](./cli/usage.md)** - Complete command-line interface guide
-- **[Interactive Playground](./playground.md)** - Try NullScript in your browser
+- **[Getting Started Guide](./src/guide/getting-started.md)** - Complete setup and first steps
+- **[Language Reference](./src/reference/keywords.md)** - Full keyword mapping and syntax
+- **[Examples](./src/examples/basic.md)** - More code examples and patterns
+- **[CLI Documentation](./src/cli/usage.md)** - Complete command-line interface guide
+- **[Interactive Playground](./src/playground.md)** - Try NullScript in your browser
 
 ## 🤝 Contributing
 
@@ -366,4 +369,4 @@ NullScript embraces the joy of coding while maintaining the power and flexibilit
 
 **Ready to add some attitude to your JavaScript?** 🚀
 
-[Get Started](./guide/getting-started.md) | [Try the Playground](./playground.md) | [View Examples](./examples/basic.md)
+[Get Started](./src/guide/getting-started.md) | [Try the Playground](./src/playground.md) | [View Examples](./src/examples/basic.md)

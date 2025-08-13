@@ -22,6 +22,7 @@ nsc run hello.ns
 ```
 
 Output:
+
 ```
 Hello, Developer! Welcome to NullScript! 🎭
 ```
@@ -47,11 +48,11 @@ console.log(message);
 
 Let's break down what we just wrote:
 
-| NullScript | JavaScript | Meaning |
-|------------|------------|---------|
-| `run greet(name)` | `function greet(name)` | Define a function |
-| `fixed message` | `const message` | Declare a constant |
-| `speak.say()` | `console.log()` | Print to console |
+| NullScript        | JavaScript             | Meaning            |
+| ----------------- | ---------------------- | ------------------ |
+| `run greet(name)` | `function greet(name)` | Define a function  |
+| `fixed message`   | `const message`        | Declare a constant |
+| `speak.say()`     | `console.log()`        | Print to console   |
 
 ## More Examples
 
@@ -186,6 +187,7 @@ nsc build src/ --outDir dist
 NullScript supports modern ES6 import/export syntax:
 
 **math.ns**:
+
 ```javascript
 share run add(a, b) {
   return a + b;
@@ -199,6 +201,7 @@ share fixed PI = 3.14159;
 ```
 
 **main.ns**:
+
 ```javascript
 use { add, subtract, PI } from './math.ns';
 
@@ -209,19 +212,19 @@ speak.say(`PI = ${PI}`);
 
 ## CLI Commands
 
-| Command | Description |
-|---------|-------------|
-| `nsc run file.ns` | Run NullScript file directly |
-| `nsc build src/` | Compile directory to JavaScript |
-| `nsc build file.ns` | Compile single file |
-| `nsc keywords` | Show all keyword mappings |
-| `nsc --help` | Show help information |
+| Command             | Description                     |
+| ------------------- | ------------------------------- |
+| `nsc run file.ns`   | Run NullScript file directly    |
+| `nsc build src/`    | Compile directory to JavaScript |
+| `nsc build file.ns` | Compile single file             |
+| `nsc keywords`      | Show all keyword mappings       |
+| `nsc --help`        | Show help information           |
 
 ## Next Steps
 
 Now that you understand the basics:
 
-- [Learn more concepts →](/guide/basic-concepts.md)
-- [Explore the full keyword reference →](/reference/keywords.md)
-- [Check out more examples →](/examples/basic.md)
-- [Learn about CLI usage →](/cli/usage.md)
+- [Learn more concepts →](../guide/basic-concepts.md)
+- [Explore the full keyword reference →](../reference/keywords.md)
+- [Check out more examples →](../examples/basic.md)
+- [Learn about CLI usage →](../cli/usage.md)

@@ -3,7 +3,7 @@
 Try NullScript code live in your browser! Write NullScript code in the editor below and see it transpiled to JavaScript in real-time.
 
 <ClientOnly>
-  <NullScriptPlayground />
+  <Playground />
 </ClientOnly>
 
 ## Example Snippets
@@ -11,6 +11,7 @@ Try NullScript code live in your browser! Write NullScript code in the editor be
 Try these examples in the playground above:
 
 ### Basic Function
+
 ```javascript
 run add(a, b) {
   return a + b;
@@ -21,6 +22,7 @@ speak.say(`Result: ${result}`);
 ```
 
 ### Control Flow
+
 ```javascript
 run checkNumber(num) {
   whatever (num > 0) {
@@ -36,6 +38,7 @@ checkNumber(42);
 ```
 
 ### Classes
+
 ```javascript
 model Calculator {
   __init__() {
@@ -58,6 +61,7 @@ speak.say(`Total: ${calc.getResult()}`);
 ```
 
 ### Error Handling
+
 ```javascript
 run safeDivide(a, b) {
   test {
@@ -76,6 +80,7 @@ speak.say(`Result: ${result}`);
 ```
 
 ### Arrays and Loops
+
 ```javascript
 fixed fruits = ["apple", "banana", "cherry"];
 

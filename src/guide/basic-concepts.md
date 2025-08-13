@@ -9,16 +9,19 @@ NullScript embraces the philosophy that programming should be enjoyable and expr
 ## Key Principles
 
 ### 1. **JavaScript Compatibility**
+
 - Every NullScript program compiles to valid JavaScript
 - No runtime dependencies or overhead
 - Seamless integration with existing JavaScript projects
 
 ### 2. **Fun-First Design**
+
 - Keywords are chosen for memorability and expressiveness
 - Syntax encourages creative, readable code
 - Maintains professional functionality with playful presentation
 
 ### 3. **Zero Learning Curve**
+
 - If you know JavaScript, you already know NullScript
 - Keywords map 1:1 to JavaScript equivalents
 - No new concepts to learn, just different ways to express them
@@ -26,7 +29,9 @@ NullScript embraces the philosophy that programming should be enjoyable and expr
 ## Core Concepts
 
 ### Function Declarations
+
 Instead of `function`, use `run`:
+
 ```javascript
 // NullScript
 run greet(name) {
@@ -40,7 +45,9 @@ function greet(name) {
 ```
 
 ### Variable Declarations
+
 Use `fixed` for constants and `let` for variables:
+
 ```javascript
 // NullScript
 fixed PI = 3.14159;
@@ -52,7 +59,9 @@ let counter = 0;
 ```
 
 ### Control Flow
+
 Express conditions with `whatever` and `otherwise`:
+
 ```javascript
 // NullScript
 whatever (age >= 18) {
@@ -70,7 +79,9 @@ if (age >= 18) {
 ```
 
 ### Console Output
+
 Use `speak.say()` instead of `console.log()`:
+
 ```javascript
 // NullScript
 speak.say("Hello, World!");
@@ -97,6 +108,7 @@ The compilation is transparent - you get the same performance as writing JavaScr
 ## Integration
 
 NullScript integrates seamlessly with:
+
 - **Node.js** projects
 - **Browser** applications
 - **Build tools** (Webpack, Vite, etc.)
