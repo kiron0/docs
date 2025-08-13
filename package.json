@@ -1,0 +1,31 @@
+{
+  "name": "nullscript-docs",
+  "version": "1.0.0",
+  "description": "Documentation for NullScript Language",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "clean": "rm -rf .vitepress/dist"
+  },
+  "dependencies": {
+    "vitepress": "^1.0.0-rc.36",
+    "vue": "^3.3.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6"
+  },
+  "keywords": [
+    "nullscript",
+    "documentation",
+    "vitepress"
+  ],
+  "author": "NullScript Language Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nullscript-lang/nullscript-docs.git"
+  },
+  "homepage": "https://nullscript-lang.github.io/nullscript-docs/"
+}
