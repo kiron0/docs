@@ -18,6 +18,8 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20'
+        check-latest: true
+        registry-url: 'https://registry.npmjs.org'
 
     - name: Debug environment
       run: |
@@ -26,12 +28,18 @@ jobs:
         echo "Current directory: $(pwd)"
         echo "Files in current directory:"
         ls -la
+        echo "Top of package.json:" && head -n 30 package.json || true
+        echo "Top of package-lock.json:" && head -n 30 package-lock.json || true
 
     - name: Clear npm cache
       run: npm cache clean --force
 
     - name: Install dependencies
-      run: npm ci
+      env:
+        NPM_CONFIG_AUDIT: 'false'
+        NPM_CONFIG_FUND: 'false'
+      run: |
+        npm ci --verbose
 
     - name: Build
       run: npm run build
