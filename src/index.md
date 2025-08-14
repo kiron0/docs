@@ -6,14 +6,12 @@ titleTemplate: false
 hero:
   name: "NullScript"
   text: "JavaScript with Attitude"
-  tagline: "A fun parody programming language that transpile to JavaScript"
+  tagline: "A fun parody programming language that transpiles to JavaScript"
   image:
     src: "/logo.png"
     alt: NullScript Logo
-    width: 256
-    height: 256
-    style:
-      borderRadius: "10%"
+    width: 512
+    height: 512
   actions:
     - theme: brand
       text: Get Started

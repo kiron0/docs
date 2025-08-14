@@ -116,12 +116,6 @@ This playground uses client-side keyword mapping for instant transpilation. For 
 5. **View Output**: See console output in the bottom panel
 6. **Copy JavaScript**: Use "📋 Copy JS" to copy the transpiled code
 
-## Keyboard Shortcuts
-
-- **Ctrl/Cmd + Enter**: Transpile and run code
-- **Ctrl/Cmd + Shift + C**: Copy JavaScript output
-- **Ctrl/Cmd + Shift + X**: Clear all content
-
 ## Tips
 
 - Start with simple examples and gradually try more complex code

@@ -1,10 +1,9 @@
 <template>
   <div class="playground-container">
-    <!-- Input Section - Full Width -->
     <div class="input-section">
       <h3>🎭 NullScript Code</h3>
       <textarea
-        v-model="nullscriptCode"
+        v-model="nullScriptCode"
         @input="debouncedTranspile"
         placeholder="// Write your NullScript code here..."
         class="code-input"
@@ -41,7 +40,6 @@
       </div>
     </div>
 
-    <!-- Output Section - Horizontal Layout -->
     <div class="output-container">
       <div class="output-panel">
         <h3>⚡ JavaScript Output</h3>
@@ -61,7 +59,7 @@
 <script setup>
 import { computed, onMounted, ref } from "vue";
 
-const nullscriptCode = ref(`// Write your NullScript code here...
+const nullScriptCode = ref(`// Write your NullScript code here...
 run greet(name) {
   return \`Hello, \${name}! Welcome to NullScript! 🎭\`;
 }
@@ -72,25 +70,14 @@ speak.say(message);`);
 const javascriptCode = ref("");
 const consoleOutput = ref("// Execution results will appear here...");
 
-// Computed property to check if input is empty
 const isInputEmpty = computed(() => {
-  return !nullscriptCode.value.trim();
+  return !nullScriptCode.value.trim();
 });
 
-// NullScript compiler status
-let compilerStatus = "checking"; // 'checking', 'available', 'unavailable'
+let compilerStatus = "checking";
 
-// Check if we can use server-side compilation
 async function checkCompilerAvailability() {
   try {
-    // In the future, we could check for a compilation API endpoint:
-    // const response = await fetch('/api/nullscript/compile', { method: 'HEAD' })
-    // if (response.ok) {
-    //   compilerStatus = 'available'
-    //   return true
-    // }
-
-    // For now, we use the fallback keyword mapping approach
     compilerStatus = "unavailable";
     console.info("Using client-side keyword mapping for transpilation");
     return false;
@@ -100,19 +87,14 @@ async function checkCompilerAvailability() {
   }
 }
 
-// Transpile NullScript to JavaScript
 async function transpileNullScript(code) {
-  // If we haven't checked compiler availability yet
   if (compilerStatus === "checking") {
     await checkCompilerAvailability();
   }
 
-  // For now, always use fallback transpilation
-  // In the future, this could be extended to use a server-side compilation API
   return fallbackTranspile(code);
 }
 
-// Fallback transpilation using keyword mappings
 function fallbackTranspile(code) {
   const keywordMappings = {
     "run ": "function ",
@@ -155,20 +137,16 @@ function fallbackTranspile(code) {
     "pull(": "fetch(",
   };
 
-  // Remove single-line comments (// ...)
   let jsCode = code.replace(/\/\/.*$/gm, "");
 
-  // Remove multi-line comments (/* ... */)
   jsCode = jsCode.replace(/\/\*[\s\S]*?\*\//g, "");
 
-  // Clean up empty lines and excessive whitespace
   jsCode = jsCode
     .split("\n")
     .map((line) => line.trim())
     .filter((line) => line.length > 0)
     .join("\n");
 
-  // Apply keyword mappings
   for (const [nullscript, javascript] of Object.entries(keywordMappings)) {
     const regex = new RegExp(
       nullscript.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
@@ -180,7 +158,6 @@ function fallbackTranspile(code) {
   return jsCode;
 }
 
-// Capture console output
 function captureConsoleOutput() {
   const output = [];
   const originalLog = console.log;
@@ -233,26 +210,22 @@ function captureConsoleOutput() {
   };
 }
 
-// Transpile code
 async function transpile() {
-  // Return early if input is empty (button should be disabled)
   if (isInputEmpty.value) return;
 
   try {
-    const code = nullscriptCode.value.trim();
+    const code = nullScriptCode.value.trim();
     if (!code) {
       javascriptCode.value = "// No code to transpile";
       return;
     }
 
-    // Show loading state
     const compilerType =
       compilerStatus === "available"
         ? "official NullScript compiler"
         : "keyword mapping";
     consoleOutput.value = `<span class="info">🔄 Transpiling with ${compilerType}...</span>`;
 
-    // Use the real NullScript compiler
     const result = await transpileNullScript(code);
     javascriptCode.value = result;
     consoleOutput.value =
@@ -263,9 +236,7 @@ async function transpile() {
   }
 }
 
-// Run transpiled code
 function runCode() {
-  // Return early if input is empty (button should be disabled)
   if (isInputEmpty.value) return;
 
   if (!javascriptCode.value.trim()) {
@@ -279,12 +250,9 @@ function runCode() {
   try {
     consoleOutput.value = "";
 
-    // Execute code using Function constructor (safer than eval)
-    // eslint-disable-next-line no-new-func
     const executeCode = new Function(javascriptCode.value);
     executeCode();
 
-    // Display captured output
     const output = capture.getOutput();
     if (output.length === 0) {
       consoleOutput.value =
@@ -309,19 +277,15 @@ function runCode() {
   }
 }
 
-// Clear all
 function clearAll() {
-  // Return early if input is empty (button should be disabled)
   if (isInputEmpty.value) return;
 
-  nullscriptCode.value = "";
+  nullScriptCode.value = "";
   javascriptCode.value = "// Transpiled JavaScript will appear here...";
   consoleOutput.value = "// Execution results will appear here...";
 }
 
-// Copy JavaScript code
 async function copyJavaScript() {
-  // Return early if input is empty (button should be disabled)
   if (isInputEmpty.value) return;
 
   if (!javascriptCode.value.trim()) {
@@ -343,19 +307,14 @@ async function copyJavaScript() {
   }
 }
 
-// Debounced transpile
 let transpileTimeout;
 function debouncedTranspile() {
   clearTimeout(transpileTimeout);
   transpileTimeout = setTimeout(() => transpile(), 500);
 }
 
-// Initialize
 onMounted(async () => {
-  // Check compiler availability first
   await checkCompilerAvailability();
-
-  // Then transpile the initial code
   await transpile();
 });
 </script>
@@ -369,14 +328,12 @@ onMounted(async () => {
   min-height: 500px;
 }
 
-/* Tablet breakpoint */
 @media (max-width: 1024px) {
   .playground-container {
     gap: 15px;
   }
 }
 
-/* Mobile breakpoint */
 @media (max-width: 768px) {
   .playground-container {
     gap: 20px;
@@ -384,7 +341,6 @@ onMounted(async () => {
   }
 }
 
-/* Small mobile breakpoint */
 @media (max-width: 480px) {
   .playground-container {
     margin: 10px 0;
@@ -398,7 +354,6 @@ onMounted(async () => {
   width: 100%;
 }
 
-/* Output container with vertical layout */
 .output-container {
   display: flex;
   flex-direction: column;
@@ -406,7 +361,6 @@ onMounted(async () => {
   width: 100%;
 }
 
-/* Individual output panels */
 .output-panel {
   width: 100%;
   display: flex;
@@ -443,7 +397,6 @@ onMounted(async () => {
   box-sizing: border-box;
 }
 
-/* Responsive textarea height */
 @media (max-width: 768px) {
   .code-input {
     height: 250px;
@@ -491,7 +444,6 @@ onMounted(async () => {
   border: 1px solid var(--vp-c-border) !important;
 }
 
-/* Responsive button sizing */
 @media (max-width: 640px) {
   .btn {
     padding: 10px 14px;
@@ -516,12 +468,13 @@ onMounted(async () => {
 
 .btn-primary {
   background: var(--vp-c-brand);
-  color: white;
+  color: #000;
   border: 1px solid var(--vp-c-border);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: var(--vp-c-brand-dark);
+  background: #e6c800;
+  transition: all 0.2s;
 }
 
 .btn-success {
@@ -532,16 +485,18 @@ onMounted(async () => {
 
 .btn-success:hover:not(:disabled) {
   background: #059669;
+  transition: all 0.2s;
 }
 
 .btn-secondary {
-  background: var(--vp-c-bg-mute);
-  color: var(--vp-c-text-1);
-  border: 1px solid var(--vp-c-border);
+  background: red;
+  color: white;
+  border: 1px solid red;
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background: var(--vp-c-bg-soft);
+  background: #b91c1c;
+  transition: all 0.2s;
 }
 
 .btn-info {
@@ -552,13 +507,14 @@ onMounted(async () => {
 
 .btn-info:hover:not(:disabled) {
   background: #2563eb;
+  transition: all 0.2s;
 }
 
 .code-output,
 .console-output {
   width: 100%;
   min-height: 200px;
-  height: 200px; /* Fixed height for consistency */
+  height: 200px;
   font-family: "Monaco", "Menlo", "Ubuntu Mono", "Courier New", monospace;
   font-size: 14px;
   border: 2px solid var(--vp-c-border);
@@ -567,18 +523,17 @@ onMounted(async () => {
   background: var(--vp-c-bg-soft);
   color: var(--vp-c-text-1);
   overflow-x: auto;
-  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-y: auto;
   white-space: pre-wrap;
   line-height: 1.5;
-  margin-bottom: 0; /* Remove bottom margin for consistent gap */
+  margin-bottom: 0;
   box-sizing: border-box;
 }
 
-/* Responsive output areas */
 @media (max-width: 768px) {
   .code-output,
   .console-output {
-    height: 150px; /* Fixed height for mobile */
+    height: 150px;
     min-height: 150px;
   }
 }
@@ -613,19 +568,17 @@ onMounted(async () => {
   color: #3b82f6;
 }
 
-/* Touch-friendly improvements */
 @media (hover: none) and (pointer: coarse) {
   .btn {
     padding: 12px 16px;
-    font-size: 16px; /* Prevent zoom on iOS */
+    font-size: 16px;
   }
 
   .code-input {
-    font-size: 16px; /* Prevent zoom on iOS */
+    font-size: 16px;
   }
 }
 
-/* Landscape mobile optimization */
 @media (max-width: 768px) and (orientation: landscape) {
   .code-input {
     height: 180px;
@@ -637,7 +590,6 @@ onMounted(async () => {
   }
 }
 
-/* Very small screens */
 @media (max-width: 320px) {
   .playground-container {
     margin: 5px 0;
