@@ -52,9 +52,6 @@ export default defineConfig({
     logo: {
       src: "/logo.png",
       alt: "NullScript Logo",
-      style: {
-        borderRadius: "10%",
-      },
     },
     nav: [
       { text: "Guide", link: "/guide/introduction" },
