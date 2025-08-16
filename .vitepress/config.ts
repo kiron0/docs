@@ -59,6 +59,7 @@ export default defineConfig({
       { text: "Playground", link: "/playground" },
       { text: "Reference", link: "/reference/keywords" },
       { text: "CLI", link: "/cli/usage" },
+      { text: "VS Code", link: "/guide/vscode-extension" },
     ],
 
     sidebar: {
@@ -80,6 +81,13 @@ export default defineConfig({
         {
           text: "Development",
           items: [{ text: "Best Practices", link: "/guide/best-practices" }],
+        },
+        {
+          text: "IDE & Tooling",
+          items: [
+            { text: "VS Code Extension", link: "/guide/vscode-extension" },
+            { text: "IDE Support", link: "/guide/ide-support" },
+          ],
         },
       ],
       "/examples/": [

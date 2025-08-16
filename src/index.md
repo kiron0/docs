@@ -19,6 +19,9 @@ hero:
     - theme: alt
       text: Try Playground
       link: /playground
+    - theme: alt
+      text: VS Code Extension
+      link: https://marketplace.visualstudio.com/items?itemName=nullscript-lang.nullscript-intelligence
 
 features:
   - icon: 🎪
@@ -39,6 +42,12 @@ features:
   - icon: 🤝
     title: JavaScript compatible
     details: Import/export with JavaScript and Node.js projects
+  - icon: 🎯
+    title: VS Code Extension
+    details: Smart auto-completion with design patterns, contextual hover docs, import assistance, and beautiful syntax highlighting
+  - icon: 🔍
+    title: IDE Support
+    details: Language server protocol support for multiple editors and development tools
 ---
 
 ## Quick Example
@@ -63,6 +72,19 @@ const message = greet("Developer");
 console.log(message);
 ```
 
+## VS Code Extension Available! 🎯
+
+Get the full NullScript development experience with our **NullScript Intelligence** extension:
+
+- 🎯 **Smart auto-completion** with design patterns and boilerplate code
+- 📖 **Enhanced hover documentation** with contextual hints and best practices
+- 📦 **Intelligent import assistance** for modules and packages
+- 🎨 **Beautiful syntax highlighting** optimized for NullScript
+- ⚡ **Performance insights** and usage statistics
+- 🎛️ **Configurable settings** to customize your experience
+
+[**Install from VS Code Marketplace →**](https://marketplace.visualstudio.com/items?itemName=nullscript-lang.nullscript-intelligence)
+
 ## Why NullScript?
 
 NullScript makes JavaScript development more enjoyable by providing:
@@ -71,6 +93,7 @@ NullScript makes JavaScript development more enjoyable by providing:
 - **No learning curve** - it's still JavaScript underneath
 - **Zero configuration** - just install and start coding
 - **Full compatibility** with existing JavaScript ecosystems
+- **Professional IDE support** with VS Code extension
 
 ---
 

@@ -573,10 +573,6 @@ onMounted(async () => {
     padding: 12px 16px;
     font-size: 16px;
   }
-
-  .code-input {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
