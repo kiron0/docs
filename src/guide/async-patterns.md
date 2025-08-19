@@ -6,12 +6,12 @@ NullScript transforms JavaScript's async/await syntax into more intuitive and re
 
 ## Core Async Keywords
 
-| NullScript | JavaScript | Description |
-|------------|------------|-------------|
+| NullScript | JavaScript | Description                    |
+| ---------- | ---------- | ------------------------------ |
 | `later`    | `async`    | Declare asynchronous functions |
-| `hold`     | `await`    | Wait for promises to resolve |
-| `test`     | `try`      | Error handling wrapp  er |
-| `grab`     | `catch`    | Catch and handle errors |
+| `hold`     | `await`    | Wait for promises to resolve   |
+| `test`     | `try`      | Error handling wrapp er        |
+| `grab`     | `catch`    | Catch and handle errors        |
 
 ## Basic Async Patterns
 

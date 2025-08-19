@@ -49,7 +49,7 @@ function greet(name) {
 // After (NullScript) - Partial migration
 function greet(name) {
   const message = `Hello, ${name}!`;
-  speak.say(message);  // Only this line changed
+  speak.say(message); // Only this line changed
   return message;
 }
 ```
@@ -156,13 +156,13 @@ let currentAttempt = 0;
 
 ```javascript
 // JavaScript → NullScript
-console.log('Info message');
-console.error('Error message');
-console.warn('Warning message');
+console.log("Info message");
+console.error("Error message");
+console.warn("Warning message");
 // ↓
-speak.say('Info message');
-speak.scream('Error message');
-speak.whisper('Warning message');
+speak.say("Info message");
+speak.scream("Error message");
+speak.whisper("Warning message");
 ```
 
 ### Control Flow
@@ -242,15 +242,15 @@ npm run test:ns
 
 ```javascript
 // server.js → server.ns
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 
 app.listen(3000, () => {
-  console.log('Server running on port 3000');
+  console.log("Server running on port 3000");
 });
 ```
 
@@ -274,7 +274,7 @@ app.listen(3000, () => {
 
 ```javascript
 // Button.js → Button.ns
-import React from 'react';
+import React from "react";
 
 const Button = ({ children, onClick, disabled = false }) => {
   return (

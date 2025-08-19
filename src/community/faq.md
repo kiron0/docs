@@ -34,20 +34,21 @@ Use the `.ns` extension for NullScript files. This helps editors and tools ident
 
 ### What are the main keyword mappings?
 
-| NullScript | JavaScript | Example |
-|------------|------------|---------|
-| `run`      | `function` | `run greet() { ... }` |
-| `whatever` | `if`       | `whatever (condition) { ... }` |
-| `speak.say`| `console.log` | `speak.say("Hello")` |
-| `speak.scream` | `console.error` | `speak.scream("Error")` |
-| `model`    | `class`    | `model User { ... }` |
-| `fresh`    | `new`      | `fresh User()` |
-| `later`    | `async`    | `run later fetch() { ... }` |
-| `hold`     | `await`    | `let data = hold fetch()` |
+| NullScript     | JavaScript      | Example                        |
+| -------------- | --------------- | ------------------------------ |
+| `run`          | `function`      | `run greet() { ... }`          |
+| `whatever`     | `if`            | `whatever (condition) { ... }` |
+| `speak.say`    | `console.log`   | `speak.say("Hello")`           |
+| `speak.scream` | `console.error` | `speak.scream("Error")`        |
+| `model`        | `class`         | `model User { ... }`           |
+| `fresh`        | `new`           | `fresh User()`                 |
+| `later`        | `async`         | `run later fetch() { ... }`    |
+| `hold`         | `await`         | `let data = hold fetch()`      |
 
 ### Can I mix NullScript and JavaScript?
 
 Yes! NullScript is designed for gradual adoption. You can:
+
 - Use NullScript in `.ns` files
 - Use JavaScript in `.js` files
 - Import between both file types
@@ -56,6 +57,7 @@ Yes! NullScript is designed for gradual adoption. You can:
 ### What about existing JavaScript libraries?
 
 NullScript works with all existing JavaScript libraries and frameworks:
+
 - React, Vue, Angular
 - Express, Koa, Fastify
 - Lodash, Moment, Axios
@@ -64,10 +66,11 @@ NullScript works with all existing JavaScript libraries and frameworks:
 ### Are there any reserved words I should avoid?
 
 Avoid using NullScript keywords as variable names:
+
 ```javascript
 // ❌ Don't use keywords as variables
-let run = "function";  // Conflicts with 'run' keyword
-let whatever = true;   // Conflicts with 'whatever' keyword
+let run = "function"; // Conflicts with 'run' keyword
+let whatever = true; // Conflicts with 'whatever' keyword
 
 // ✅ Use descriptive names instead
 let functionName = "function";
@@ -93,6 +96,7 @@ let condition = true;
 ### Can I use TypeScript with NullScript?
 
 Yes! NullScript can work alongside TypeScript:
+
 1. Write NullScript code in `.ns` files
 2. Compile to JavaScript with `nsc`
 3. Use TypeScript to type-check the generated JavaScript
@@ -161,6 +165,7 @@ speak.say(user.greet());
 ### Can I use modern JavaScript features?
 
 Yes! NullScript supports all modern JavaScript features:
+
 - Arrow functions
 - Destructuring
 - Spread/rest operators
@@ -183,6 +188,7 @@ Yes! NullScript supports all modern JavaScript features:
 ### Will my existing code break?
 
 No! NullScript is designed for seamless migration:
+
 - All JavaScript code is valid NullScript
 - You can mix both in the same project
 - Gradual adoption is encouraged
@@ -191,6 +197,7 @@ No! NullScript is designed for seamless migration:
 ### What about build tools and bundlers?
 
 NullScript works with all major build tools:
+
 - **Webpack**: Use `nullscript-loader`
 - **Vite**: Use `vite-plugin-nullscript`
 - **Rollup**: Use `@rollup/plugin-nullscript`
@@ -200,6 +207,7 @@ NullScript works with all major build tools:
 ### Can I use NullScript in the browser?
 
 Yes! You have several options:
+
 1. **Compile First**: Use `nsc` to compile to JavaScript, then load the JS
 2. **Runtime Transpilation**: Use the browser runtime for development
 3. **CDN**: Load from CDN for quick testing
@@ -209,6 +217,7 @@ Yes! You have several options:
 ### How do I test NullScript code?
 
 Test NullScript code the same way you test JavaScript:
+
 - **Jest**: Works out of the box
 - **Mocha**: No configuration needed
 - **Vitest**: Full compatibility
@@ -218,6 +227,7 @@ Test NullScript code the same way you test JavaScript:
 ### Can I use testing frameworks with NullScript?
 
 Absolutely! All testing frameworks work seamlessly:
+
 ```javascript
 // user.test.ns
 use { User } from './user.ns';
@@ -234,6 +244,7 @@ describe('User', () => {
 ### How do I handle debugging in tests?
 
 Use NullScript's debugging features in tests:
+
 ```javascript
 test('should handle errors gracefully', () => {
     test {
@@ -249,6 +260,7 @@ test('should handle errors gracefully', () => {
 ### Is there a performance impact?
 
 **No performance impact in production!** NullScript:
+
 - Compiles to standard JavaScript
 - No runtime overhead
 - Same performance as handwritten JavaScript
@@ -264,6 +276,7 @@ test('should handle errors gracefully', () => {
 ### Can I use NullScript in production?
 
 Absolutely! NullScript is production-ready:
+
 - Stable and reliable
 - Used in production applications
 - Full JavaScript compatibility
@@ -282,6 +295,7 @@ Absolutely! NullScript is production-ready:
 ### How can I contribute?
 
 We welcome contributions! Here are ways to help:
+
 - **Code**: Submit pull requests
 - **Documentation**: Improve guides and examples
 - **Testing**: Test features and report bugs
@@ -291,6 +305,7 @@ We welcome contributions! Here are ways to help:
 ### Is NullScript open source?
 
 Yes! NullScript is completely open source:
+
 - MIT License
 - Public repository on GitHub
 - Community-driven development
@@ -299,6 +314,7 @@ Yes! NullScript is completely open source:
 ### What's the roadmap for NullScript?
 
 Our development priorities include:
+
 - Enhanced IDE support
 - More language features
 - Better tooling integration
@@ -310,16 +326,19 @@ Our development priorities include:
 ### Common compilation errors
 
 **"Unexpected token" errors:**
+
 - Check that you're using `.ns` file extension
 - Ensure proper NullScript syntax
 - Verify keyword usage
 
 **"Module not found" errors:**
+
 - Check file paths and extensions
 - Ensure modules are properly exported
 - Verify import/export syntax
 
 **"Cannot read property" errors:**
+
 - Check object initialization
 - Verify method calls
 - Ensure proper error handling

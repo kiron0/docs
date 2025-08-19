@@ -48,6 +48,9 @@ features:
   - icon: 🔍
     title: IDE Support
     details: Language server protocol support for multiple editors and development tools
+  - icon: 🎨
+    title: Syntax Highlighting
+    details: Beautiful syntax highlighting optimized for NullScript
 ---
 
 ## Quick Example
@@ -72,16 +75,16 @@ const message = greet("Developer");
 console.log(message);
 ```
 
-## VS Code Extension Available! 🎯
+## VS Code Extension Available!
 
 Get the full NullScript development experience with our **NullScript Intelligence** extension:
 
-- 🎯 **Smart auto-completion** with design patterns and boilerplate code
-- 📖 **Enhanced hover documentation** with contextual hints and best practices
-- 📦 **Intelligent import assistance** for modules and packages
-- 🎨 **Beautiful syntax highlighting** optimized for NullScript
-- ⚡ **Performance insights** and usage statistics
-- 🎛️ **Configurable settings** to customize your experience
+- **Smart auto-completion** with design patterns and boilerplate code
+- **Enhanced hover documentation** with contextual hints and best practices
+- **Intelligent import assistance** for modules and packages
+- **Beautiful syntax highlighting** optimized for NullScript
+- **Performance insights** and usage statistics
+- **Configurable settings** to customize your experience
 
 [**Install from VS Code Marketplace →**](https://marketplace.visualstudio.com/items?itemName=nullscript-lang.nullscript-intelligence)
 
@@ -99,11 +102,11 @@ NullScript makes JavaScript development more enjoyable by providing:
 
 Join our growing community and access comprehensive resources:
 
-- **[📚 Documentation](https://github.com/nullscript-lang/docs)** - Complete guides and examples
-- **[❓ FAQ](./community/faq.md)** - Common questions and answers
-- **[🤝 Contributing](./community/contribute.md)** - Help improve documentation
-- **[🎮 Playground](./playground.md)** - Interactive code examples
-- **[📖 Examples](./examples/basic.md)** - Practical code samples
+- **[Documentation](./guide/introduction.md)** - Complete guides and examples
+- **[FAQ](./community/faq.md)** - Common questions and answers
+- **[Contributing](./community/contribute.md)** - Help improve documentation
+- **[Playground](./playground.md)** - Interactive code examples
+- **[Examples](./examples/basic.md)** - Practical code samples
 
 ---
 
