@@ -80,6 +80,7 @@ export default defineConfig({
       options: {
         appId: "Z8O1Z6YXR3",
         apiKey: "8047e0cf23cdf8639ec18c6ef7dcac4b",
+        indexName: "nullscript",
       },
     },
 
