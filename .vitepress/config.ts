@@ -16,7 +16,7 @@ export default defineConfig({
     ["link", { rel: "apple-touch-icon", href: "/logo.png" }],
     [
       "meta",
-      { property: "algolia-site-verification", content: "81DBB8D28A8F7E23" },
+      { name: "algolia-site-verification", content: "81DBB8D28A8F7E23" },
     ],
     ["meta", { property: "og:type", content: "website" }],
     [
@@ -114,6 +114,16 @@ export default defineConfig({
           ],
         },
         {
+          text: "Migration & Compatibility",
+          items: [
+            { text: "Migration Guide", link: "/guide/migration" },
+            {
+              text: "JavaScript Compatibility",
+              link: "/guide/javascript-compatibility",
+            },
+          ],
+        },
+        {
           text: "Development",
           items: [{ text: "Best Practices", link: "/guide/best-practices" }],
         },
@@ -137,7 +147,10 @@ export default defineConfig({
       "/reference/": [
         {
           text: "Reference",
-          items: [{ text: "Keywords", link: "/reference/keywords" }],
+          items: [
+            { text: "Keywords", link: "/reference/keywords" },
+            { text: "Complete Syntax", link: "/reference/syntax" },
+          ],
         },
       ],
       "/cli/": [

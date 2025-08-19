@@ -202,26 +202,31 @@ model ResourceManager {
 
 ## Testing
 
-Write comprehensive tests:
+Write comprehensive tests using your preferred testing framework:
 
 ```javascript
 // Test file: calculator.test.ns
-use { describe, it, expect } from 'jest';
-use { Calculator } from './calculator';
+// Note: Use your preferred testing framework (Jest, Mocha, etc.)
+// This example shows the structure - adapt to your testing setup
 
-describe('Calculator', () => {
+// Example test structure
+run testCalculator() {
   fixed calc = fresh Calculator();
 
-  it('should add numbers correctly', () => {
-    let result = calc.add(2, 3);
-    expect(result).toBe(5);
-  });
+  // Test addition
+  let result = calc.add(2, 3);
+  whatever (result !== 5) {
+    speak.scream('Addition test failed: expected 5, got', result);
+  }
 
-  it('should handle negative numbers', () => {
-    let result = calc.add(-2, 3);
-    expect(result).toBe(1);
-  });
-});
+  // Test negative numbers
+  result = calc.add(-2, 3);
+  whatever (result !== 1) {
+    speak.scream('Negative number test failed: expected 1, got', result);
+  }
+
+  speak.say('All tests passed!');
+}
 ```
 
 ## Documentation
