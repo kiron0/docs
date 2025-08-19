@@ -115,6 +115,7 @@ model EventHandler {
 Hover over any NullScript keyword to see comprehensive contextual information:
 
 #### Basic Information
+
 - **Description**: What the keyword does
 - **JavaScript equivalent**: Shows the corresponding JS syntax
 - **Syntax examples**: How to use the keyword
@@ -122,6 +123,7 @@ Hover over any NullScript keyword to see comprehensive contextual information:
 - **Category tips**: Best practices for each keyword type
 
 #### Advanced Context Analysis
+
 - **Contextual hints**: Smart suggestions based on current code context
   - Error handling warnings for `test`/`grab` blocks
   - Async function detection for `run later`
@@ -133,6 +135,7 @@ Hover over any NullScript keyword to see comprehensive contextual information:
 - **Usage statistics**: How many times the keyword is used in the current file
 
 #### Spell Checker Integration
+
 - **Operator protection**: Special handling for NullScript operators that might be flagged by spell checkers
 - **Dictionary suggestions**: Helpful notes about adding NullScript keywords to your spell checker dictionary
 
@@ -141,6 +144,7 @@ Hover over any NullScript keyword to see comprehensive contextual information:
 The extension provides intelligent import management and suggestions:
 
 #### Auto-Import Suggestions
+
 - **Named imports**: Completion for common exports when typing inside `use { }`
   ```javascript
   use { fs, path, http } from // Suggests common Node.js modules
@@ -148,6 +152,7 @@ The extension provides intelligent import management and suggestions:
   ```
 
 #### Module Completions
+
 - **Built-in modules**: Node.js core modules with descriptions
   - `fs` - File system operations
   - `path` - Path manipulation utilities
@@ -156,6 +161,7 @@ The extension provides intelligent import management and suggestions:
   - `lodash` - Utility library
 
 #### Import Pattern Helpers
+
 - **Named imports template**: `use { exports } from 'module'`
 - **Default import template**: `use name from 'module'`
 - **Module suggestions**: Common modules with descriptions
@@ -199,44 +205,45 @@ Pre-built snippets for common NullScript patterns with intelligent placeholders:
 
 #### Basic Snippets
 
-| Prefix | Description | Output |
-|--------|-------------|---------|
-| `run` | Function declaration | `run ${1:functionName}(${2:params}) {\n\t$0\n}` |
-| `later` | Async function | `later run ${1:functionName}() {\n\t${2:// async code}\n\t$0\n}` |
-| `whatever` | If statement | `whatever (${1:condition}) {\n\t$0\n}` |
-| `since` | For loop | `since (let ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++) {\n\t$0\n}` |
-| `when` | While loop | `when (${1:condition}) {\n\t$0\n}` |
-| `test` | Try-catch block | `test {\n\t${1:// code that might throw}\n} grab (${2:error}) {\n\t${3:// handle error}\n}` |
-| `model` | Class declaration | `model ${1:ClassName} {\n\t__init__(${2:params}) {\n\t\t${3:// constructor code}\n\t}\n\t$0\n}` |
-| `fixed` | Constant declaration | `fixed ${1:name} = ${2:value};` |
-| `let` | Variable declaration | `let ${1:name} = ${2:value};` |
-| `share` | Export statement | `share { ${1:exports} };` |
-| `use` | Import statement | `use { ${1:imports} } from '${2:module}';` |
-| `speak` | Console log | `speak.say(${1:message});` |
+| Prefix     | Description          | Output                                                                                          |
+| ---------- | -------------------- | ----------------------------------------------------------------------------------------------- |
+| `run`      | Function declaration | `run ${1:functionName}(${2:params}) {\n\t$0\n}`                                                 |
+| `later`    | Async function       | `later run ${1:functionName}() {\n\t${2:// async code}\n\t$0\n}`                                |
+| `whatever` | If statement         | `whatever (${1:condition}) {\n\t$0\n}`                                                          |
+| `since`    | For loop             | `since (let ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++) {\n\t$0\n}`                             |
+| `when`     | While loop           | `when (${1:condition}) {\n\t$0\n}`                                                              |
+| `test`     | Try-catch block      | `test {\n\t${1:// code that might throw}\n} grab (${2:error}) {\n\t${3:// handle error}\n}`     |
+| `model`    | Class declaration    | `model ${1:ClassName} {\n\t__init__(${2:params}) {\n\t\t${3:// constructor code}\n\t}\n\t$0\n}` |
+| `fixed`    | Constant declaration | `fixed ${1:name} = ${2:value};`                                                                 |
+| `let`      | Variable declaration | `let ${1:name} = ${2:value};`                                                                   |
+| `share`    | Export statement     | `share { ${1:exports} };`                                                                       |
+| `use`      | Import statement     | `use { ${1:imports} } from '${2:module}';`                                                      |
+| `speak`    | Console log          | `speak.say(${1:message});`                                                                      |
 
 #### Advanced Design Pattern Snippets
 
-| Prefix | Description | Features |
-|--------|-------------|----------|
+| Prefix             | Description             | Features                                           |
+| ------------------ | ----------------------- | -------------------------------------------------- |
 | `observer-pattern` | Observer Design Pattern | Complete Subject and Observer classes with methods |
-| `api-handler` | API Request Handler | Full request/response handler with error handling |
-| `event-handler` | Event Handler Class | Complete event system with on/off/emit methods |
+| `api-handler`      | API Request Handler     | Full request/response handler with error handling  |
+| `event-handler`    | Event Handler Class     | Complete event system with on/off/emit methods     |
 
 ## Configuration
 
 ### Extension Settings
 
 Access settings via:
+
 - **Command Palette**: `Preferences: Open Settings (UI)`
 - **Menu**: File → Preferences → Settings
 - **Search**: "NullScript"
 
 #### Available Settings
 
-| Setting | Type | Default | Description |
-|---------|------|---------|-------------|
-| `nullscript.completion.enabled` | boolean | `true` | Enable intelligent auto-completion with design patterns |
-| `nullscript.hover.enabled` | boolean | `true` | Enable enhanced contextual hover documentation |
+| Setting                         | Type    | Default | Description                                             |
+| ------------------------------- | ------- | ------- | ------------------------------------------------------- |
+| `nullscript.completion.enabled` | boolean | `true`  | Enable intelligent auto-completion with design patterns |
+| `nullscript.hover.enabled`      | boolean | `true`  | Enable enhanced contextual hover documentation          |
 
 ### Workspace Configuration
 
@@ -281,6 +288,7 @@ The extension is optimized for performance:
 
 **Problem**: Extension doesn't activate for `.ns` files
 **Solution**:
+
 1. Check file association in settings
 2. Reload VS Code window (Ctrl+Shift+P → "Developer: Reload Window")
 3. Verify extension is enabled in Extensions view
@@ -289,6 +297,7 @@ The extension is optimized for performance:
 
 **Problem**: No suggestions appearing
 **Solution**:
+
 1. Check `nullscript.completion.enabled` setting
 2. Ensure you're in a `.ns` file
 3. Try typing a few characters of a NullScript keyword
@@ -297,6 +306,7 @@ The extension is optimized for performance:
 
 **Problem**: No hover information showing
 **Solution**:
+
 1. Verify `nullscript.hover.enabled` is true
 2. Hover over actual NullScript keywords
 3. Check for conflicting extensions
@@ -323,6 +333,7 @@ We welcome contributions to improve the NullScript Intelligence extension! This 
 #### Setting Up the Development Environment
 
 1. **Fork and Clone**
+
    ```bash
    git fork https://github.com/nullscript-lang/nullscript-intelligence
    git clone https://github.com/nullscript-lang/nullscript-intelligence.git
@@ -330,11 +341,13 @@ We welcome contributions to improve the NullScript Intelligence extension! This 
    ```
 
 2. **Install Dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Compile TypeScript**
+
    ```bash
    npm run compile
    # or for continuous compilation
@@ -367,16 +380,19 @@ vscode-extension/
 #### Key Components
 
 **Completion Provider** (`src/extension.ts`)
+
 - Handles auto-completion for keywords, methods, and imports
 - Context-aware suggestions based on cursor position
 - Design pattern snippets for common coding patterns
 
 **Hover Provider** (`src/extension.ts`)
+
 - Provides rich documentation on keyword hover
 - Shows JavaScript equivalents and usage examples
 - Performance hints and best practices
 
 **Keywords System** (`src/keywords.ts`)
+
 - Central repository of all NullScript keywords
 - Categorized by functionality (Control Flow, Variables, etc.)
 - Includes syntax examples and descriptions
@@ -386,23 +402,27 @@ vscode-extension/
 #### Types of Contributions
 
 **🐛 Bug Fixes**
+
 - Fix completion issues or incorrect suggestions
 - Resolve hover documentation problems
 - Address syntax highlighting bugs
 
 **✨ Feature Enhancements**
+
 - Add new keyword support
 - Improve completion intelligence
 - Enhance hover documentation
 - Add new code snippets or design patterns
 
 **📚 Documentation**
+
 - Improve code comments
 - Update README files
 - Add usage examples
 - Create developer guides
 
 **🧪 Testing**
+
 - Add unit tests for new features
 - Create integration tests
 - Test extension performance
@@ -411,6 +431,7 @@ vscode-extension/
 #### Development Workflow
 
 1. **Create a Feature Branch**
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -421,6 +442,7 @@ vscode-extension/
    - Include JSDoc comments for public methods
 
 3. **Test Your Changes**
+
    ```bash
    # Compile and check for errors
    npm run compile
@@ -436,6 +458,7 @@ vscode-extension/
    - Add error handling where appropriate
 
 5. **Commit and Push**
+
    ```bash
    git add .
    git commit -m "feat: add new keyword completion for 'example'"
@@ -451,10 +474,10 @@ vscode-extension/
 #### Code Style Guidelines
 
 **TypeScript Standards**
+
 ```typescript
 // Use meaningful names
 class NullScriptCompletionProvider implements vscode.CompletionItemProvider {
-
   // Add JSDoc for public methods
   /**
    * Provides completion items for NullScript keywords
@@ -464,7 +487,7 @@ class NullScriptCompletionProvider implements vscode.CompletionItemProvider {
    */
   async provideCompletionItems(
     document: vscode.TextDocument,
-    position: vscode.Position
+    position: vscode.Position,
   ): Promise<vscode.CompletionItem[]> {
     // Implementation here
   }
@@ -477,6 +500,7 @@ class NullScriptCompletionProvider implements vscode.CompletionItemProvider {
 ```
 
 **Adding New Keywords**
+
 ```typescript
 // In src/keywords.ts
 {
@@ -492,6 +516,7 @@ class NullScriptCompletionProvider implements vscode.CompletionItemProvider {
 #### Testing Your Changes
 
 **Manual Testing Checklist**
+
 - [ ] Extension activates properly for `.ns` files
 - [ ] Auto-completion works for new keywords
 - [ ] Hover documentation displays correctly
@@ -500,6 +525,7 @@ class NullScriptCompletionProvider implements vscode.CompletionItemProvider {
 - [ ] Performance remains responsive
 
 **Automated Testing**
+
 ```bash
 # Run TypeScript compiler to check for errors
 npm run compile
@@ -513,6 +539,7 @@ npm run package
 #### Adding a New Keyword
 
 1. **Add to Keywords Array** (`src/keywords.ts`)
+
    ```typescript
    {
      nullscript: "newkeyword",
@@ -525,6 +552,7 @@ npm run package
    ```
 
 2. **Add Snippet** (`snippets/nullscript.json`)
+
    ```json
    "New Keyword": {
      "prefix": "newkeyword",
@@ -541,6 +569,7 @@ npm run package
 #### Improving Completion Intelligence
 
 1. **Enhance Context Detection** (`src/extension.ts`)
+
    ```typescript
    // Add context-specific completion logic
    if (beforeCursor.endsWith("newcontext.")) {
@@ -565,6 +594,7 @@ npm run package
 - **Performance issues**: Check for inefficient loops or heavy operations
 
 **Debug Tools**
+
 - Use VS Code Developer Tools (`Help > Toggle Developer Tools`)
 - Check Extension Host console for errors
 - Use `console.log()` for debugging (remove before committing)
@@ -572,14 +602,17 @@ npm run package
 ### Resources for Contributors
 
 **VS Code Extension Development**
+
 - [VS Code Extension API](https://code.visualstudio.com/api)
 - [Language Extension Guide](https://code.visualstudio.com/api/language-extensions/overview)
 
 **TypeScript Resources**
+
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 - [VS Code Types](https://www.npmjs.com/package/@types/vscode)
 
 **Testing and Quality**
+
 - [Extension Testing](https://code.visualstudio.com/api/working-with-extensions/testing-extension)
 - [VS Code Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
 

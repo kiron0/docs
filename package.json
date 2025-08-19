@@ -10,14 +10,9 @@
     "clean": "rm -rf .vitepress/dist",
     "format": "prettier --write \"**/*.{js,json,md,vue}\""
   },
-  "dependencies": {
-    "vitepress": "^1.0.0-rc.36",
-    "vue": "^3.3.13"
-  },
   "devDependencies": {
-    "@types/node": "^20.10.6",
-    "gh-pages": "^6.3.0",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "vitepress": "^2.0.0-alpha.11"
   },
   "keywords": [
     "nullscript",

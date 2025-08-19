@@ -1,3 +1,7 @@
+<script setup>
+import Playground from '../.vitepress/components/playground.vue'
+</script>
+
 # NullScript Playground
 
 Try NullScript code live in your browser! Write NullScript code in the editor below and see it transpiled to JavaScript in real-time.

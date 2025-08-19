@@ -4,13 +4,20 @@ export default defineConfig({
   title: "NullScript",
   description:
     "A fun parody programming language that transpiles to JavaScript",
+
   base: "/",
-  appearance: true,
   srcDir: "src",
+
+  appearance: true,
+  cleanUrls: true,
+
   head: [
     ["link", { rel: "icon", href: "/logo.png" }],
     ["link", { rel: "apple-touch-icon", href: "/logo.png" }],
-    // Open Graph / Facebook
+    [
+      "meta",
+      { property: "algolia-site-verification", content: "81DBB8D28A8F7E23" },
+    ],
     ["meta", { property: "og:type", content: "website" }],
     [
       "meta",
@@ -47,12 +54,40 @@ export default defineConfig({
       },
     ],
     ["meta", { name: "twitter:image", content: "/og-image.png" }],
+
+    [
+      "script",
+      {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-NXS0RYNB3C",
+      },
+    ],
+    [
+      "script",
+      {},
+      `
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', 'G-NXS0RYNB3C');
+      `,
+    ],
   ],
+
   themeConfig: {
+    search: {
+      provider: "algolia",
+      options: {
+        appId: "Z8O1Z6YXR3",
+        apiKey: "8047e0cf23cdf8639ec18c6ef7dcac4b",
+      },
+    },
+
     logo: {
       src: "/logo.png",
       alt: "NullScript Logo",
     },
+
     nav: [
       { text: "Guide", link: "/guide/introduction" },
       { text: "Examples", link: "/examples/basic" },
@@ -115,7 +150,6 @@ export default defineConfig({
 
     socialLinks: [
       { icon: "github", link: "https://github.com/nullscript-lang/nullscript" },
-      { icon: "twitter", link: "https://twitter.com/hashtagkiron" },
     ],
   },
 });

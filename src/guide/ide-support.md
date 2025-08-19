@@ -109,61 +109,66 @@ Create a major mode for NullScript:
 Add NullScript support to Monaco (used in VS Code Web):
 
 ```javascript
-import * as monaco from 'monaco-editor';
+import * as monaco from "monaco-editor";
 
 // Register NullScript language
-monaco.languages.register({ id: 'nullscript' });
+monaco.languages.register({ id: "nullscript" });
 
 // Add syntax highlighting
-monaco.languages.setMonarchTokensProvider('nullscript', {
+monaco.languages.setMonarchTokensProvider("nullscript", {
   tokenizer: {
     root: [
-      [/\b(run|return|whatever|otherwise|since|when|fixed|let|share|use|test|grab|later|model|inherits|speak|yes|no|null|undefined)\b/, 'keyword'],
-      [/"([^"\\]|\\.)*$/, 'string.invalid'],
-      [/"/, 'string', '@string_double'],
-      [/'/, 'string', '@string_single'],
-      [/\/\/.*$/, 'comment'],
-      [/\/\*/, 'comment', '@comment'],
-      [/\d+(\.\d+)?/, 'number'],
+      [
+        /\b(run|return|whatever|otherwise|since|when|fixed|let|share|use|test|grab|later|model|inherits|speak|yes|no|null|undefined)\b/,
+        "keyword",
+      ],
+      [/"([^"\\]|\\.)*$/, "string.invalid"],
+      [/"/, "string", "@string_double"],
+      [/'/, "string", "@string_single"],
+      [/\/\/.*$/, "comment"],
+      [/\/\*/, "comment", "@comment"],
+      [/\d+(\.\d+)?/, "number"],
     ],
     string_double: [
-      [/[^\\"]+/, 'string'],
-      [/\\./, 'string.escape'],
-      [/"/, 'string', '@pop']
+      [/[^\\"]+/, "string"],
+      [/\\./, "string.escape"],
+      [/"/, "string", "@pop"],
     ],
     string_single: [
-      [/[^\\']+/, 'string'],
-      [/\\./, 'string.escape'],
-      [/'/, 'string', '@pop']
+      [/[^\\']+/, "string"],
+      [/\\./, "string.escape"],
+      [/'/, "string", "@pop"],
     ],
     comment: [
-      [/[^\/*]+/, 'comment'],
-      [/\*\//, 'comment', '@pop'],
-      [/[\/*]/, 'comment']
-    ]
-  }
+      [/[^\/*]+/, "comment"],
+      [/\*\//, "comment", "@pop"],
+      [/[\/*]/, "comment"],
+    ],
+  },
 });
 
 // Add auto-completion
-monaco.languages.registerCompletionItemProvider('nullscript', {
+monaco.languages.registerCompletionItemProvider("nullscript", {
   provideCompletionItems: (model, position) => {
     const suggestions = [
       {
-        label: 'run',
+        label: "run",
         kind: monaco.languages.CompletionItemKind.Keyword,
-        insertText: 'run ${1:functionName}(${2:params}) {\n\t$0\n}',
-        insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
+        insertText: "run ${1:functionName}(${2:params}) {\n\t$0\n}",
+        insertTextRules:
+          monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
       },
       {
-        label: 'whatever',
+        label: "whatever",
         kind: monaco.languages.CompletionItemKind.Keyword,
-        insertText: 'whatever (${1:condition}) {\n\t$0\n}',
-        insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet
-      }
+        insertText: "whatever (${1:condition}) {\n\t$0\n}",
+        insertTextRules:
+          monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
+      },
       // Add more completions...
     ];
     return { suggestions };
-  }
+  },
 });
 ```
 
@@ -172,15 +177,15 @@ monaco.languages.registerCompletionItemProvider('nullscript', {
 Add NullScript mode to CodeMirror:
 
 ```javascript
-import { LanguageSupport, LRLanguage } from '@codemirror/language';
-import { parser } from './nullscript-parser'; // Generated from grammar
+import { LanguageSupport, LRLanguage } from "@codemirror/language";
+import { parser } from "./nullscript-parser"; // Generated from grammar
 
 const nullscriptLanguage = LRLanguage.define({
   parser: parser,
   languageData: {
-    commentTokens: { line: '//', block: { open: '/*', close: '*/' } },
-    indentOnInput: /^\s*[{}]$/
-  }
+    commentTokens: { line: "//", block: { open: "/*", close: "*/" } },
+    indentOnInput: /^\s*[{}]$/,
+  },
 });
 
 export function nullscript() {
@@ -221,24 +226,27 @@ Create ESLint configuration for NullScript:
 // eslint-plugin-nullscript
 module.exports = {
   rules: {
-    'use-nullscript-keywords': {
+    "use-nullscript-keywords": {
       create(context) {
         return {
           FunctionDeclaration(node) {
-            if (node.type === 'FunctionDeclaration') {
+            if (node.type === "FunctionDeclaration") {
               context.report({
                 node,
                 message: 'Use "run" instead of "function" in NullScript',
                 fix(fixer) {
-                  return fixer.replaceText(node, node.source().replace('function', 'run'));
-                }
+                  return fixer.replaceText(
+                    node,
+                    node.source().replace("function", "run"),
+                  );
+                },
               });
             }
-          }
+          },
         };
-      }
-    }
-  }
+      },
+    },
+  },
 };
 ```
 
@@ -254,18 +262,18 @@ module.exports = {
         test: /\.ns$/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
-              presets: ['@babel/preset-env']
-            }
+              presets: ["@babel/preset-env"],
+            },
           },
           {
-            loader: 'nullscript-loader' // Custom loader to transpile .ns to .js
-          }
-        ]
-      }
-    ]
-  }
+            loader: "nullscript-loader", // Custom loader to transpile .ns to .js
+          },
+        ],
+      },
+    ],
+  },
 };
 ```
 
@@ -285,7 +293,7 @@ NullScript:
   type: programming
   color: "#f1e05a"
   extensions:
-  - ".ns"
+    - ".ns"
   tm_scope: source.nullscript
   ace_mode: javascript
   language_id: 998
