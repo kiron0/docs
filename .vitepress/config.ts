@@ -14,10 +14,6 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/logo.png" }],
     ["link", { rel: "apple-touch-icon", href: "/logo.png" }],
-    [
-      "meta",
-      { name: "algolia-site-verification", content: "81DBB8D28A8F7E23" },
-    ],
     ["meta", { property: "og:type", content: "website" }],
     [
       "meta",
@@ -75,15 +71,6 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    search: {
-      provider: "algolia",
-      options: {
-        appId: "Z8O1Z6YXR3",
-        apiKey: "8047e0cf23cdf8639ec18c6ef7dcac4b",
-        indexName: "nullscript",
-      },
-    },
-
     logo: {
       src: "/logo.png",
       alt: "NullScript Logo",
