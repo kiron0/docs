@@ -13,25 +13,30 @@ npm install -g nullscript
 The NullScript CLI is organized into logical command groups:
 
 ### 📦 BUILD & RUN
+
 - `nsc build` - Transpile NullScript files to JavaScript
 - `nsc run` - Execute NullScript files directly
 - `nsc convert` - Convert JavaScript files to NullScript
 
 ### 🔧 PROJECT MANAGEMENT
+
 - `nsc init` - Initialize new NullScript projects
 - `nsc config` - Manage configuration files
 
 ### 💻 DEVELOPMENT
+
 - `nsc dev` - Development mode with file watching
 - `nsc complete` - Get code completion suggestions
 - `nsc debug` - Debug NullScript files with breakpoints
 
 ### 📊 ANALYSIS & INFO
+
 - `nsc analyze` - Analyze project performance and metrics
 - `nsc analytics` - Show project analytics and statistics
 - `nsc info` - Display detailed file information
 
 ### 🎛️ UTILITIES
+
 - `nsc keywords` - Browse available keywords and mappings
 - `nsc system` - Show system information
 
@@ -53,6 +58,7 @@ nsc build src/ --outDir dist
 ```
 
 **Features:**
+
 - Recursive directory processing
 - Preserves directory structure
 - Source map generation
@@ -67,6 +73,7 @@ nsc run hello.ns
 ```
 
 **Perfect for:**
+
 - Quick testing and prototyping
 - Running simple scripts
 - Development and debugging
@@ -109,6 +116,7 @@ nsc init --force
 ```
 
 **Available Templates:**
+
 - `basic` - Simple project structure
 - `web` - Web application template
 - `node` - Node.js application template
@@ -198,6 +206,7 @@ nsc analyze src/ --format json
 ```
 
 **Analysis Features:**
+
 - Bundle size analysis
 - Build time metrics
 - Code complexity analysis
@@ -248,6 +257,7 @@ nsc info src/ --detailed
 ```
 
 **Information Displayed:**
+
 - File sizes and line counts
 - Modification timestamps
 - Project structure analysis
@@ -268,6 +278,7 @@ nsc keywords --category "Console Methods"
 ```
 
 **Available Categories:**
+
 - `Control Flow` - Conditionals, loops, and flow control
 - `Variables & Declarations` - Variable declaration keywords
 - `Functions & Methods` - Function-related keywords
@@ -293,16 +304,17 @@ nsc system --info
 ```
 
 **System Check:**
+
 - Node.js availability and version
 - NullScript CLI version
 - System compatibility
 
 ## Global Options
 
-| Option | Short | Description |
-|--------|-------|-------------|
-| `--help` | `-h` | Show help information |
-| `--version` | `-v` | Show version number |
+| Option      | Short | Description           |
+| ----------- | ----- | --------------------- |
+| `--help`    | `-h`  | Show help information |
+| `--version` | `-v`  | Show version number   |
 
 ## Development Workflows
 
@@ -445,6 +457,7 @@ my-nullscript-project/
 ### Common Issues
 
 **Installation Issues:**
+
 ```bash
 # Clear npm cache and reinstall
 npm cache clean --force
@@ -456,6 +469,7 @@ nsc system --info
 ```
 
 **Build Errors:**
+
 ```bash
 # Get detailed error information
 nsc build src/ --verbose
@@ -468,6 +482,7 @@ nsc info src/ --detailed
 ```
 
 **Performance Issues:**
+
 ```bash
 # Analyze bottlenecks
 nsc analyze src/ --format html
@@ -480,6 +495,7 @@ nsc system --info
 ```
 
 **Development Workflow Issues:**
+
 ```bash
 # Reset configuration
 nsc config --generate --force
@@ -527,7 +543,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - run: npm install -g nullscript
       - run: nsc build src/
       - run: nsc analyze src/ --bundle-size-limit 1000000
@@ -547,3 +563,4 @@ Add common commands to your `package.json`:
     "convert": "nsc convert legacy.js --output legacy.ns"
   }
 }
+```
