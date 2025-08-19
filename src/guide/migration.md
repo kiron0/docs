@@ -4,14 +4,14 @@
 
 This guide helps you migrate existing JavaScript projects to NullScript, whether you're converting entire projects or introducing NullScript gradually.
 
-## 🚀 Why Migrate to NullScript?
+## Why Migrate to NullScript?
 
 - **Zero Breaking Changes** - Your existing JavaScript code continues to work
 - **Gradual Adoption** - Convert files one at a time
 - **Full Compatibility** - All JavaScript libraries and frameworks work unchanged
 - **Enhanced Readability** - More expressive keywords make code self-documenting
 
-## 📋 Pre-Migration Checklist
+## Pre-Migration Checklist
 
 Before starting your migration:
 
@@ -20,7 +20,7 @@ Before starting your migration:
 - [ ] Backup your original JavaScript files
 - [ ] Install NullScript CLI: `npm install -g nullscript`
 
-## 🔄 Migration Strategies
+## Migration Strategies
 
 ### Strategy 1: File-by-File Migration (Recommended)
 
@@ -58,7 +58,7 @@ function greet(name) {
 
 Use NullScript only for new code while keeping existing code unchanged.
 
-## 🎯 Step-by-Step Migration Process
+## Step-by-Step Migration Process
 
 ### Step 1: Install and Configure
 
@@ -127,7 +127,7 @@ npm test
 cat dist/math.js
 ```
 
-## 🔧 Common Migration Patterns
+## Common Migration Patterns
 
 ### Function Declarations
 
@@ -197,7 +197,7 @@ fixed isActive = yes;
 fixed isHidden = no;
 ```
 
-## 🚨 Potential Issues and Solutions
+## Potential Issues and Solutions
 
 ### Issue 1: Module System Differences
 
@@ -217,7 +217,7 @@ fixed isHidden = no;
 
 **Solution**: Use NullScript CLI to compile before your main build process
 
-## 🧪 Testing Your Migration
+## Testing Your Migration
 
 ### Automated Testing
 
@@ -236,7 +236,7 @@ npm run test:ns
 3. **Check browser compatibility**: Test in different browsers
 4. **Verify performance**: Ensure no performance regression
 
-## 📚 Migration Examples
+## Migration Examples
 
 ### Example 1: Express.js Server
 
@@ -304,7 +304,7 @@ fixed Button = ({ children, onClick, disabled = no }) => {
 share default Button;
 ```
 
-## 🎉 Post-Migration Checklist
+## Post-Migration Checklist
 
 After completing your migration:
 
@@ -315,7 +315,7 @@ After completing your migration:
 - [ ] Team is trained on new syntax
 - [ ] Documentation is updated
 
-## 🆘 Getting Help
+## Getting Help
 
 If you encounter issues during migration:
 
@@ -324,19 +324,19 @@ If you encounter issues during migration:
 3. **Review [Examples](../examples/basic.md)** for common patterns
 4. **Join our community** for support
 
-## 🚀 Next Steps
+## Next Steps
 
 Now that you've migrated to NullScript:
 
 - Explore [Advanced Examples](../examples/advanced.md)
-- Learn [Best Practices](../best-practices.md)
-- Check out [IDE Support](../ide-support.md)
-- Check out [JavaScript Compatibility](../javascript-compatibility.md)
+- Learn [Best Practices](../guide/best-practices.md)
+- Check out [IDE Support](../guide/ide-support.md)
+- Check out [JavaScript Compatibility](../guide/javascript-compatibility.md)
 - Try the [Interactive Playground](../playground.md)
 - Explore [Basic Examples](../examples/basic.md)
 
 ---
 
-**Ready to start your migration?** 🎭
+**Ready to start your migration?**
 
-[Install NullScript](../installation.md) | [View Keywords](../reference/keywords.md) | [Try Examples](../examples/basic.md)
+[Install NullScript](../guide/installation.md) | [View Keywords](../reference/keywords.md) | [Try Examples](../examples/basic.md)

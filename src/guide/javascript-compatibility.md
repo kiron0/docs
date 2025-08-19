@@ -4,7 +4,7 @@
 
 NullScript is designed to be a **drop-in replacement** for JavaScript. Every valid JavaScript program is also a valid NullScript program, and every NullScript program compiles to clean, standard JavaScript.
 
-## 🔒 Compatibility Guarantee
+## Compatibility Guarantee
 
 ### **What This Means:**
 - ✅ **All JavaScript code works unchanged** in NullScript
@@ -19,7 +19,7 @@ NullScript is designed to be a **drop-in replacement** for JavaScript. Every val
 - **Full ecosystem access** - use any npm package
 - **Future-proof** - new JavaScript features automatically work
 
-## 🎯 How Compatibility Works
+## How Compatibility Works
 
 ### **1. Source-Level Compatibility**
 
@@ -74,7 +74,7 @@ nsc build hello.ns
 node hello.js
 ```
 
-## 🧪 Compatibility Testing
+## Compatibility Testing
 
 ### **Test Suite Coverage**
 
@@ -139,7 +139,7 @@ const app = createApp({
 });
 ```
 
-## 🔧 Build Tool Integration
+## Build Tool Integration
 
 ### **Webpack**
 
@@ -181,7 +181,7 @@ export default {
 };
 ```
 
-## 🚨 What Doesn't Change
+## What Doesn't Change
 
 ### **Runtime Behavior**
 
@@ -205,7 +205,7 @@ export default {
 - **TypeScript** - Can add types to NullScript
 - **Jest/Vitest** - Same testing experience
 
-## 🔄 Migration Scenarios
+## Migration Scenarios
 
 ### **Scenario 1: New Project**
 
@@ -259,7 +259,7 @@ const result = formatDate(new Date());
 console.log(validate(result));
 ```
 
-## 🧪 Testing Compatibility
+## Testing Compatibility
 
 ### **Automated Testing**
 
@@ -281,7 +281,7 @@ diff src/ dist/ --exclude='*.js'
 3. **Performance testing**: Verify no performance regression
 4. **Browser testing**: Test in all target browsers
 
-## 🎯 Best Practices for Compatibility
+## Best Practices for Compatibility
 
 ### **1. Gradual Adoption**
 
@@ -329,7 +329,7 @@ describe('Date formatting', () => {
 });
 ```
 
-## 🚀 Advanced Compatibility Features
+## Advanced Compatibility Features
 
 ### **Framework Compatibility**
 
@@ -365,7 +365,7 @@ import { useState } from 'react';          // ES modules
 module.exports = { helper };               // CommonJS
 ```
 
-## 🆘 Troubleshooting Compatibility Issues
+## Troubleshooting Compatibility Issues
 
 ### **Common Issues and Solutions**
 
@@ -385,14 +385,14 @@ module.exports = { helper };               // CommonJS
 
 **Solution**: Verify compiled JavaScript output matches expectations
 
-## 📚 Resources
+## Resources
 
 - **[Keywords Reference](../reference/keywords.md)** - Complete syntax mapping
 - **[Migration Guide](./migration.md)** - Step-by-step migration process
 - **[Examples](../examples/basic.md)** - Real-world compatibility examples
 - **[Playground](../playground.md)** - Test compatibility online
 
-## 🎉 Conclusion
+## Conclusion
 
 NullScript's 100% JavaScript compatibility means:
 

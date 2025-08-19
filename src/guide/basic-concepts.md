@@ -116,3 +116,12 @@ NullScript integrates seamlessly with:
 - **Package managers** (npm, yarn, pnpm)
 
 Since NullScript compiles to JavaScript, it works everywhere JavaScript works.
+
+## Next Steps
+
+Now that you understand the basic concepts, explore:
+
+- **[Advanced Async Patterns](../guide/async-patterns.md)** - Master asynchronous programming with `later`, `hold`, `test`, and `grab`
+- **[Module System](../guide/modules.md)** - Learn to organize code with `use`, `share`, and `from`
+- **[Class System](../guide/classes.md)** - Build object-oriented code with `model`, `self`, and `__init__`
+- **[Best Practices](../guide/best-practices.md)** - Follow coding standards and patterns

@@ -95,6 +95,16 @@ NullScript makes JavaScript development more enjoyable by providing:
 - **Full compatibility** with existing JavaScript ecosystems
 - **Professional IDE support** with VS Code extension
 
+## Community & Resources
+
+Join our growing community and access comprehensive resources:
+
+- **[📚 Documentation](https://github.com/nullscript-lang/docs)** - Complete guides and examples
+- **[❓ FAQ](./community/faq.md)** - Common questions and answers
+- **[🤝 Contributing](./community/contribute.md)** - Help improve documentation
+- **[🎮 Playground](./playground.md)** - Interactive code examples
+- **[📖 Examples](./examples/basic.md)** - Practical code samples
+
 ---
 
 _"NullScript: Because programming should be fun, even when it's serious."_ 🎭

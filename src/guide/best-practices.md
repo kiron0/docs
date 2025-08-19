@@ -385,3 +385,12 @@ whatever (config.debug) {
 5. **Profile your code regularly**
 
 Remember: NullScript compiles to JavaScript, so all JavaScript performance best practices apply!
+
+## Related Topics
+
+Continue your learning journey with these advanced guides:
+
+- **[Advanced Async Patterns](../guide/async-patterns.md)** - Master asynchronous programming patterns
+- **[Module System](../guide/modules.md)** - Organize code with best practices
+- **[Class System](../guide/classes.md)** - Object-oriented programming patterns
+- **[JavaScript Compatibility](../guide/javascript-compatibility.md)** - Ensure smooth integration

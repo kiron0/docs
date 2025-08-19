@@ -629,4 +629,4 @@ share { name };
 
 **Need more details on specific features?** 📖
 
-[View Keywords](../keywords.md) | [Try Examples](../examples/basic.md) | [Use Playground](../playground.md)
+[View Keywords](../reference/keywords.md) | [Try Examples](../examples/basic.md) | [Use Playground](../playground.md)

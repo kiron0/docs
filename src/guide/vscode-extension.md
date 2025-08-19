@@ -2,7 +2,12 @@
 
 The **NullScript Intelligence** extension provides intelligent language support for NullScript in Visual Studio Code, featuring smart auto-completion, contextual hover documentation, import assistance, and beautiful syntax highlighting.
 
-**Current Version**: 0.1.4
+<div style="display: flex; align-items: center; gap: 0.5em;">
+  <span><strong>Current Version:</strong></span>
+  <a href="https://marketplace.visualstudio.com/items?itemName=nullscript-lang.nullscript-intelligence" target="_blank">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/nullscript-lang.nullscript-intelligence?style=social" alt="Latest Release">
+  </a>
+</div>
 
 ## Installation
 
