@@ -23,7 +23,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nullscript-lang/nullscript-docs.git"
+    "url": "https://github.com/nullscript-lang/docs.git"
   },
   "homepage": "https://nullscript.js.org"
 }

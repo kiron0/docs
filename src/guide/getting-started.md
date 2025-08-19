@@ -224,7 +224,10 @@ speak.say(`PI = ${PI}`);
 
 Now that you understand the basics:
 
-- [Learn more concepts →](../guide/basic-concepts.md)
-- [Explore the full keyword reference →](../reference/keywords.md)
-- [Check out more examples →](../examples/basic.md)
-- [Learn about CLI usage →](../cli/usage.md)
+- **[Learn more concepts](../guide/basic-concepts.md)** - Deep dive into core language concepts
+- **[Advanced Async Patterns](../guide/async-patterns.md)** - Master asynchronous programming
+- **[Module System](../guide/modules.md)** - Organize your code effectively
+- **[Class System](../guide/classes.md)** - Build object-oriented applications
+- **[Explore the full keyword reference](../reference/keywords.md)** - Complete syntax reference
+- **[Check out more examples](../examples/basic.md)** - Practical code examples
+- **[Learn about CLI usage](../cli/usage.md)** - Command-line tooling

@@ -93,8 +93,7 @@ export default defineConfig({
       { text: "Examples", link: "/examples/basic" },
       { text: "Playground", link: "/playground" },
       { text: "Reference", link: "/reference/keywords" },
-      { text: "CLI", link: "/cli/usage" },
-      { text: "VS Code", link: "/guide/vscode-extension" },
+      { text: "Community", link: "/community/faq" },
     ],
 
     sidebar: {
@@ -125,13 +124,27 @@ export default defineConfig({
         },
         {
           text: "Development",
-          items: [{ text: "Best Practices", link: "/guide/best-practices" }],
+          items: [
+            { text: "Best Practices", link: "/guide/best-practices" },
+            { text: "Advanced Async Patterns", link: "/guide/async-patterns" },
+            { text: "Module System", link: "/guide/modules" },
+            { text: "Class System", link: "/guide/classes" },
+          ],
         },
         {
           text: "IDE & Tooling",
           items: [
             { text: "VS Code Extension", link: "/guide/vscode-extension" },
             { text: "IDE Support", link: "/guide/ide-support" },
+          ],
+        },
+      ],
+      "/community/": [
+        {
+          text: "Community",
+          items: [
+            { text: "Contribute", link: "/community/contribute" },
+            { text: "FAQ", link: "/community/faq" },
           ],
         },
       ],
