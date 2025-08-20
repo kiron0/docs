@@ -7,7 +7,9 @@ This comprehensive reference covers every aspect of NullScript syntax, from basi
 ## Basic Syntax
 
 ### **File Extension**
+
 NullScript files use the `.ns` extension:
+
 ```bash
 # File naming
 app.ns          # Main application file
@@ -16,6 +18,7 @@ components.ns   # React components
 ```
 
 ### **Comments**
+
 ```javascript
 // Single-line comment
 /* Multi-line comment
@@ -25,7 +28,9 @@ components.ns   # React components
 ```
 
 ### **Semicolons**
+
 Semicolons are optional but recommended:
+
 ```javascript
 run greet() {
   speak.say("Hello")  // No semicolon needed
@@ -37,11 +42,11 @@ run greet() {
 
 ### **Variable Declarations**
 
-| JavaScript | NullScript | Description |
-|------------|------------|-------------|
-| `const` | `fixed` | Declare a constant (cannot be reassigned) |
-| `let` | `let` | Declare a mutable variable |
-| `var` | `var` | Function-scoped variable (avoid in modern code) |
+| JavaScript | NullScript | Description                                     |
+| ---------- | ---------- | ----------------------------------------------- |
+| `const`    | `fixed`    | Declare a constant (cannot be reassigned)       |
+| `let`      | `let`      | Declare a mutable variable                      |
+| `var`      | `var`      | Function-scoped variable (avoid in modern code) |
 
 ```javascript
 // Variable declarations
@@ -56,10 +61,10 @@ fixed [first, second] = array;
 
 ### **Function Declarations**
 
-| JavaScript | NullScript | Description |
-|------------|------------|-------------|
-| `function` | `run` | Declare a function |
-| `=>` | `=>` | Arrow function syntax (unchanged) |
+| JavaScript | NullScript | Description                       |
+| ---------- | ---------- | --------------------------------- |
+| `function` | `run`      | Declare a function                |
+| `=>`       | `=>`       | Arrow function syntax (unchanged) |
 
 ```javascript
 // Function declarations
@@ -76,13 +81,13 @@ const processData = (data) => {
 
 ### **Console Methods**
 
-| JavaScript | NullScript | Description |
-|------------|------------|-------------|
-| `console.log()` | `speak.say()` | Print information to console |
-| `console.error()` | `speak.scream()` | Print error to console |
-| `console.warn()` | `speak.whisper()` | Print warning to console |
-| `console.info()` | `speak.tell()` | Print info to console |
-| `console.debug()` | `speak.murmur()` | Print debug info to console |
+| JavaScript        | NullScript        | Description                  |
+| ----------------- | ----------------- | ---------------------------- |
+| `console.log()`   | `speak.say()`     | Print information to console |
+| `console.error()` | `speak.scream()`  | Print error to console       |
+| `console.warn()`  | `speak.whisper()` | Print warning to console     |
+| `console.info()`  | `speak.tell()`    | Print info to console        |
+| `console.debug()` | `speak.murmur()`  | Print debug info to console  |
 
 ```javascript
 // Console methods
@@ -95,10 +100,10 @@ speak.murmur("This is debug info");
 
 ### **Boolean Values**
 
-| JavaScript | NullScript | Description |
-|------------|------------|-------------|
-| `true` | `yes` | Boolean true value |
-| `false` | `no` | Boolean false value |
+| JavaScript | NullScript | Description         |
+| ---------- | ---------- | ------------------- |
+| `true`     | `yes`      | Boolean true value  |
+| `false`    | `no`       | Boolean false value |
 
 ```javascript
 // Boolean values
@@ -109,56 +114,56 @@ fixed hasPermission = yes;
 
 ### **Control Flow Keywords**
 
-| JavaScript | NullScript | Description |
-|------------|------------|-------------|
-| `if` | `whatever` | Conditional statement |
-| `else` | `otherwise` | Else clause |
-| `else if` | `otherwise whatever` | Else if clause |
-| `switch` | `choose` | Switch statement |
-| `case` | `option` | Case in switch |
-| `default` | `fallback` | Default case |
-| `for` | `when` | For loop |
-| `while` | `during` | While loop |
-| `do` | `do` | Do-while loop (unchanged) |
-| `break` | `break` | Break statement (unchanged) |
-| `continue` | `continue` | Continue statement (unchanged) |
+| JavaScript | NullScript           | Description                    |
+| ---------- | -------------------- | ------------------------------ |
+| `if`       | `whatever`           | Conditional statement          |
+| `else`     | `otherwise`          | Else clause                    |
+| `else if`  | `otherwise whatever` | Else if clause                 |
+| `switch`   | `choose`             | Switch statement               |
+| `case`     | `option`             | Case in switch                 |
+| `default`  | `fallback`           | Default case                   |
+| `for`      | `when`               | For loop                       |
+| `while`    | `during`             | While loop                     |
+| `do`       | `do`                 | Do-while loop (unchanged)      |
+| `break`    | `break`              | Break statement (unchanged)    |
+| `continue` | `continue`           | Continue statement (unchanged) |
 
 ### **Class Keywords**
 
-| JavaScript | NullScript | Description |
-|------------|------------|-------------|
-| `class` | `model` | Define a class |
-| `new` | `fresh` | Create new instance |
-| `this` | `self` | Reference to current instance |
-| `constructor` | `__init__` | Class constructor |
-| `extends` | `extends` | Class inheritance (unchanged) |
-| `super` | `super` | Call parent constructor (unchanged) |
-| `static` | `static` | Static methods (unchanged) |
+| JavaScript    | NullScript | Description                         |
+| ------------- | ---------- | ----------------------------------- |
+| `class`       | `model`    | Define a class                      |
+| `new`         | `fresh`    | Create new instance                 |
+| `this`        | `self`     | Reference to current instance       |
+| `constructor` | `__init__` | Class constructor                   |
+| `extends`     | `extends`  | Class inheritance (unchanged)       |
+| `super`       | `super`    | Call parent constructor (unchanged) |
+| `static`      | `static`   | Static methods (unchanged)          |
 
 ### **Module Keywords**
 
-| JavaScript | NullScript | Description |
-|------------|------------|-------------|
-| `import` | `use` | Import modules |
-| `export` | `share` | Export modules |
-| `from` | `from` | Import source (unchanged) |
-| `default` | `default` | Default export (unchanged) |
+| JavaScript | NullScript | Description                |
+| ---------- | ---------- | -------------------------- |
+| `import`   | `use`      | Import modules             |
+| `export`   | `share`    | Export modules             |
+| `from`     | `from`     | Import source (unchanged)  |
+| `default`  | `default`  | Default export (unchanged) |
 
 ### **Error Handling**
 
-| JavaScript | NullScript | Description |
-|------------|------------|-------------|
-| `try` | `test` | Try block |
-| `catch` | `grab` | Catch block |
-| `finally` | `finally` | Finally block (unchanged) |
-| `throw` | `throw` | Throw error (unchanged) |
+| JavaScript | NullScript | Description               |
+| ---------- | ---------- | ------------------------- |
+| `try`      | `test`     | Try block                 |
+| `catch`    | `grab`     | Catch block               |
+| `finally`  | `finally`  | Finally block (unchanged) |
+| `throw`    | `throw`    | Throw error (unchanged)   |
 
 ### **Async/Await**
 
-| JavaScript | NullScript | Description |
-|------------|------------|-------------|
-| `async` | `later` | Async function |
-| `await` | `hold` | Await promise |
+| JavaScript | NullScript | Description    |
+| ---------- | ---------- | -------------- |
+| `async`    | `later`    | Async function |
+| `await`    | `hold`     | Await promise  |
 
 ## Control Flow
 
@@ -480,7 +485,7 @@ const retryCount = config.retries ?? 3;
 ```javascript
 // All JavaScript syntax works
 const numbers = [1, 2, 3, 4, 5];
-const doubled = numbers.map(n => n * 2);
+const doubled = numbers.map((n) => n * 2);
 const sum = numbers.reduce((total, n) => total + n, 0);
 
 // Modern JavaScript features
@@ -491,10 +496,10 @@ const newArray = [...oldArray, newItem];
 // Async/await
 async function fetchData() {
   try {
-    const response = await fetch('/api/data');
+    const response = await fetch("/api/data");
     return await response.json();
   } catch (error) {
-    console.error('Error:', error);
+    console.error("Error:", error);
   }
 }
 ```
@@ -550,8 +555,8 @@ describe('User Class', () => {
 
 ```javascript
 // ❌ Don't use reserved keywords as variable names
-let run = "function";        // 'run' is a keyword
-let whatever = "if";         // 'whatever' is a keyword
+let run = "function"; // 'run' is a keyword
+let whatever = "if"; // 'whatever' is a keyword
 
 // ✅ Use descriptive names instead
 let functionName = "function";
@@ -573,8 +578,8 @@ use { useState, useEffect } from 'react';
 
 ```javascript
 // ❌ Mixing boolean values
-let isActive = true;         // JavaScript style
-let isHidden = no;           // NullScript style
+let isActive = true; // JavaScript style
+let isHidden = no; // NullScript style
 
 // ✅ Use consistent NullScript style
 let isActive = yes;
@@ -584,29 +589,31 @@ let isHidden = no;
 ## Quick Reference Card
 
 ### **Essential Keywords**
+
 ```javascript
-fixed    // const
-let      // let (unchanged)
-run      // function
-speak.say()  // console.log()
-yes      // true
-no       // false
-whatever // if
-otherwise // else
-when     // for
-during   // while
-model    // class
-fresh    // new
-self     // this
-use      // import
-share    // export
-test     // try
-grab     // catch
-later    // async
-hold     // await
+fixed; // const
+let // let (unchanged)
+  run; // function
+speak.say(); // console.log()
+yes; // true
+no; // false
+whatever; // if
+otherwise; // else
+when; // for
+during; // while
+model; // class
+fresh; // new
+self; // this
+use; // import
+share; // export
+test; // try
+grab; // catch
+later; // async
+hold; // await
 ```
 
 ### **Common Patterns**
+
 ```javascript
 // Function declaration
 run functionName(param) { ... }

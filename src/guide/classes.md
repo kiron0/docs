@@ -6,14 +6,14 @@ NullScript transforms JavaScript's class syntax into more readable and expressiv
 
 ## Core Class Keywords
 
-| NullScript | JavaScript | Description |
-|------------|------------|-------------|
-| `model`    | `class`    | Define a class |
-| `__init__` | `constructor` | Class constructor |
-| `self`     | `this`     | Reference to current instance |
-| `inherits` | `extends`  | Class inheritance |
-| `fresh`    | `new`      | Create new instance |
-| `super`    | `super`    | Call parent constructor/method |
+| NullScript | JavaScript    | Description                    |
+| ---------- | ------------- | ------------------------------ |
+| `model`    | `class`       | Define a class                 |
+| `__init__` | `constructor` | Class constructor              |
+| `self`     | `this`        | Reference to current instance  |
+| `inherits` | `extends`     | Class inheritance              |
+| `fresh`    | `new`         | Create new instance            |
+| `super`    | `super`       | Call parent constructor/method |
 
 ## Basic Class Definition
 

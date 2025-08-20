@@ -7,6 +7,7 @@ NullScript is designed to be a **drop-in replacement** for JavaScript. Every val
 ## Compatibility Guarantee
 
 ### **What This Means:**
+
 - ✅ **All JavaScript code works unchanged** in NullScript
 - ✅ **All JavaScript libraries and frameworks** work without modification
 - ✅ **All JavaScript APIs and features** are fully supported
@@ -14,6 +15,7 @@ NullScript is designed to be a **drop-in replacement** for JavaScript. Every val
 - ✅ **All JavaScript runtimes** (Node.js, browsers) are supported
 
 ### **What This Guarantees:**
+
 - **Zero breaking changes** when switching to NullScript
 - **Gradual adoption** - convert files one at a time
 - **Full ecosystem access** - use any npm package
@@ -34,7 +36,8 @@ function calculateTotal(items) {
 }
 
 // Arrow functions work exactly the same
-const processItems = (items) => items.map(item => ({ ...item, processed: true }));
+const processItems = (items) =>
+  items.map((item) => ({ ...item, processed: true }));
 
 // Modern JavaScript features work
 const { name, price } = item;
@@ -91,7 +94,7 @@ Tested and verified with:
 
 ```javascript
 // React - Full compatibility
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -100,32 +103,28 @@ const Counter = () => {
     document.title = `Count: ${count}`;
   }, [count]);
 
-  return (
-    <button onClick={() => setCount(count + 1)}>
-      Count: {count}
-    </button>
-  );
+  return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
 };
 ```
 
 ```javascript
 // Express.js - Full compatibility
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/api/users', (req, res) => {
+app.get("/api/users", (req, res) => {
   const users = getUsers();
   res.json(users);
 });
 
 app.listen(3000, () => {
-  console.log('Server running');
+  console.log("Server running");
 });
 ```
 
 ```javascript
 // Vue.js - Full compatibility
-import { createApp, ref, computed } from 'vue';
+import { createApp, ref, computed } from "vue";
 
 const app = createApp({
   setup() {
@@ -135,7 +134,7 @@ const app = createApp({
     const increment = () => count.value++;
 
     return { count, doubleCount, increment };
-  }
+  },
 });
 ```
 
@@ -150,11 +149,11 @@ module.exports = {
     rules: [
       {
         test: /\.ns$/,
-        use: 'nullscript-loader',
-        exclude: /node_modules/
-      }
-    ]
-  }
+        use: "nullscript-loader",
+        exclude: /node_modules/,
+      },
+    ],
+  },
 };
 ```
 
@@ -162,11 +161,11 @@ module.exports = {
 
 ```javascript
 // vite.config.js
-import { defineConfig } from 'vite';
-import nullscript from 'vite-plugin-nullscript';
+import { defineConfig } from "vite";
+import nullscript from "vite-plugin-nullscript";
 
 export default defineConfig({
-  plugins: [nullscript()]
+  plugins: [nullscript()],
 });
 ```
 
@@ -174,10 +173,10 @@ export default defineConfig({
 
 ```javascript
 // rollup.config.js
-import nullscript from '@rollup/plugin-nullscript';
+import nullscript from "@rollup/plugin-nullscript";
 
 export default {
-  plugins: [nullscript()]
+  plugins: [nullscript()],
 };
 ```
 
@@ -252,8 +251,8 @@ Run both JavaScript and NullScript together:
 
 ```javascript
 // app.js (JavaScript)
-import { formatDate } from './utils.ns';  // NullScript module
-import { validate } from './validators.js'; // JavaScript module
+import { formatDate } from "./utils.ns"; // NullScript module
+import { validate } from "./validators.js"; // JavaScript module
 
 const result = formatDate(new Date());
 console.log(validate(result));
@@ -316,15 +315,15 @@ use { validate } from './validators.js';
 
 ```javascript
 // Test both versions
-describe('Date formatting', () => {
-  test('JavaScript version', () => {
-    const result = formatDateJS(new Date('2023-01-01'));
-    expect(result).toBe('January 1, 2023');
+describe("Date formatting", () => {
+  test("JavaScript version", () => {
+    const result = formatDateJS(new Date("2023-01-01"));
+    expect(result).toBe("January 1, 2023");
   });
 
-  test('NullScript version', () => {
-    const result = formatDateNS(new Date('2023-01-01'));
-    expect(result).toBe('January 1, 2023');
+  test("NullScript version", () => {
+    const result = formatDateNS(new Date("2023-01-01"));
+    expect(result).toBe("January 1, 2023");
   });
 });
 ```

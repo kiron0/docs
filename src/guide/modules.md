@@ -6,11 +6,11 @@ NullScript provides a clean and expressive module system using `use`, `share`, a
 
 ## Core Module Keywords
 
-| NullScript | JavaScript | Description |
-|------------|------------|-------------|
-| `use`      | `import`   | Import modules and exports |
+| NullScript | JavaScript | Description                           |
+| ---------- | ---------- | ------------------------------------- |
+| `use`      | `import`   | Import modules and exports            |
 | `share`    | `export`   | Export functions, classes, and values |
-| `from`     | `from`     | Specify import source (unchanged) |
+| `from`     | `from`     | Specify import source (unchanged)     |
 
 ## Basic Module Operations
 
@@ -226,18 +226,18 @@ src/
 
 ```html
 <script type="importmap">
-{
-  "imports": {
-    "nullscript/": "/node_modules/nullscript/",
-    "@app/": "/src/",
-    "@shared/": "/src/shared/"
+  {
+    "imports": {
+      "nullscript/": "/node_modules/nullscript/",
+      "@app/": "/src/",
+      "@shared/": "/src/shared/"
+    }
   }
-}
 </script>
 
 <script type="module">
-  import { User } from '@app/models/User.ns';
-  import { utils } from '@shared/utils.ns';
+  import { User } from "@app/models/User.ns";
+  import { utils } from "@shared/utils.ns";
 </script>
 ```
 

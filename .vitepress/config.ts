@@ -10,6 +10,7 @@ export default defineConfig({
 
   appearance: true,
   cleanUrls: true,
+  metaChunk: true,
 
   head: [
     ["link", { rel: "icon", href: "/logo.png" }],

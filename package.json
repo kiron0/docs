@@ -8,7 +8,7 @@
     "build": "vitepress build",
     "preview": "vitepress preview",
     "clean": "rm -rf .vitepress/dist",
-    "format": "prettier --write \"**/*.{js,json,md,vue}\""
+    "format": "prettier --write \"**/*.{css,js,json,md,vue}\""
   },
   "devDependencies": {
     "prettier": "^3.6.2",
